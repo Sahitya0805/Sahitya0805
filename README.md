@@ -1,16 +1,35 @@
-## Hi there 👋
+# 👋 Hi, I'm Sahitya Singh  
 
-<!--
-**Sahitya0805/Sahitya0805** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### ⚡ About Me  
+🏫 **First-year B.Tech student at NMIT Bangalore**  
+🧩 Currently learning **Java, Python, HTML & CSS**  
+🚀 Trying to understand how the world of code *actually works!*  
+🎯 My goal → *Build cool stuff that makes people say “woah!”*  
+⚡ Powered by **curiosity & creativity** 🎨  
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🧩 Fun Zone  
+🎮 **Currently working on:**  
+> A personal website that looks like a game 👾  
+
+💡 **Favourite Quote:**  
+> “Every great coder was once a beginner who never gave up.”  
+
+😎 **Random Fact:**  
+> I spend more time fixing bugs than writing code — but that’s the fun part!  
+
+---
+
+### 🧬 My Coding Loop  
+```python
+while True:
+    learn()
+    code()
+    make_mistakes()
+    laugh()
+    repeat()
+```
+---
+
+⭐ *Thanks for visiting my profile!* 😊
