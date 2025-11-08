@@ -4,9 +4,9 @@
   <img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFFFFF&size=30&center=true&vCenter=true&width=700&lines=👋+Hi,+I'm+Sahitya+Singh!" />
   
   <p align="center">
-    <img src="https://komarev.com/ghpvc/?username=Sahitya0805&color=39FF14&style=for-the-badge" />
-    <img src="https://img.shields.io/github/followers/Sahitya0805?label=Followers&style=for-the-badge&color=00FFAA" />
-    <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=FFD700&label=Stars" />
+    <img src="https://komarev.com/ghpvc/?username=Sahitya0805&color=1E90FF&style=for-the-badge" />
+    <img src="https://img.shields.io/github/followers/Sahitya0805?label=Followers&style=for-the-badge&color=FFDA03" />
+    <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=32CD32&label=Stars" />
   </p>
   <p align="center"><img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡" /></p>
 
@@ -80,7 +80,7 @@
 
 <div align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=900&lines=🤔+Why+don't+programmers+like+nature%3F;" />
-  <img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=39FF14&size=22&center=true&vCenter=true&width=900&lines=💡+Answer:+It+has+too+many+bugs!" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=32CD32&size=22&center=true&vCenter=true&width=900&lines=💡+Answer:+It+has+too+many+bugs!" />
 </div>
 
   <p align="center"><img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡" /></p>
