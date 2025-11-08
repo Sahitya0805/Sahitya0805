@@ -1,6 +1,6 @@
-<!-- 🌐 WELCOME TO MY DIGITAL WORLD -->
+<!--🌎 WELCOME TO MY DIGITAL WORLD -->
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=1E90FF&size=35&center=true&vCenter=true&width=800&lines=🌐+WELCOME+TO+MY+DIGITAL+WORLD+🌐" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=1E90FF&size=35&center=true&vCenter=true&width=800&lines=🌎+WELCOME+TO+MY+DIGITAL+WORLD+🌎" />
   <img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFFFFF&size=30&center=true&vCenter=true&width=700&lines=👋+Hi,+I'm+Sahitya+Singh!" />
   
   <p align="center">
@@ -21,9 +21,31 @@
 
 <p align="center"><img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡" /></p>
 
+## 🛠️ Tech Arsenal
+<div align="center">
+
+### 👨‍💻 Programming Languages
+| JavaScript | Python | Java |
+|:--:|:--:|:--:|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="50"/> |
+
+### 🚀 Frontend Development
+| HTML5 | CSS3 |
+|:--:|:--:|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50"/> |
+
+### ☁️ DevOps & Cloud
+| Git |
+|:--:|
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50"/> |
+
+</div>
+
+<p align="center"><img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡" /></p>
+
 ## 📊 GitHub Stats
 <div align="center">
-  <!-- Custom GitHub Stats Layout -->
+ 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Sahitya0805&show_icons=true&theme=chartreuse-dark" height="160"/>
   <img src="https://github-readme-streak-stats.herokuapp.com?user=Sahitya0805&theme=chartreuse-dark&hide_border=false" height="160"/>
@@ -36,7 +58,7 @@
 
 <!-- Graph Container -->
 <div style="background-color: #1e1e1e; padding: 20px; border-radius: 10px;">
-  <h3 style="color: #FFFFFF; text-align: center;">GitHub Contributions</h3>
+  <h3 style="color: #FFFFFF; text-align: center;">📊GitHub Contributions</h3>
   <canvas id="contributionGraph" width="800" height="400"></canvas>
 </div>
 <p align="center">
@@ -101,10 +123,10 @@
 
   <p align="center"><img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡" /></p>
 
-## ✨ Thank You
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=1E90FF&size=28&center=true&vCenter=true&width=800&lines=✨+Thanks+for+Visiting+My+Profile!;Keep+Building,+Keep+Dreaming,+Keep+Coding..." />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=1E90FF&size=28&center=true&vCenter=true&width=800&lines=✨+Thanks+for+Visiting+My+Profile!;Dream+→+Build+→+Repeat." />
 </p>
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00FF00,100:0047AB&height=120&section=footer" />
 </p>
