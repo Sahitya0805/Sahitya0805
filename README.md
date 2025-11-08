@@ -91,7 +91,7 @@
     <img src="https://img.icons8.com/fluency/96/000000/gmail-new.png" width="80" />
 </a>
 
-  <a href="[https://www.linkedin.com/in/sahitya-singh-7012b137b]" target="_blank">
+  <a href="https://www.linkedin.com/in/sahitya-singh-7012b137b" target="_blank">
     <img src="https://img.icons8.com/fluency/96/000000/linkedin.png" width="80" />
   </a>
   <a href="https://www.instagram.com/sahit_ya8050?igsh=YXNpY2p5Y3ZqMHRv" target="_blank">
