@@ -78,6 +78,7 @@
 <p align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=Sahitya0805&theme=tokyonight&no-frame=true&margin-w=15&row=1&column=6&title=MultiLanguage,PullRequest,Repositories,Experience,Commits,Followers,Issues" />
 </p>
+<div><a href="https://cloud.layer5.io/user/55ff6b45-c08f-4ede-9cb3-27cc86a92616?tab=badges&badge=first-design" alt="First Design" ><img width="175px" height="252px" src="https://badges.layer5.io/assets/badges/first-design/first-design.png" alt="First Design" /></a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup><a href="https://badges.layer5.io"></a></sup></div>
 
   <p align="center"><img src="https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡" /></p>
 
