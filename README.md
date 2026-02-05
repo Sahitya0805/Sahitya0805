@@ -7,9 +7,8 @@
 
 <div align="center">
 
-  <!-- Header: Neon Glowing SVGs (Served Locally) -->
+  <!-- Header: Floating Neon SVGs -->
   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/header_world.svg" width="800" />
-  <br>
   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/header_hi.svg" width="600" />
   
   <br>
@@ -37,9 +36,19 @@
     ⚡ Motto: "Dream -> Build -> Repeat"
   </h3>
   
-  <!-- Detailed Stats Box (Generated Locally by metrics.yml) -->
+  <!-- Detailed Stats Boxes (Two Distinct Boxes) -->
+  <table align="center">
+    <tr>
+      <td><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/github_stats_specs.svg" height="180em" alt="Specs" /></td>
+      <td><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/top_langs_specs.svg" height="180em" alt="Langs" /></td>
+    </tr>
+  </table>
+  
+  <br>
+  
+  <!-- Activity Stats Box -->
   <div align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/detailed_stats.svg" width="600" alt="Detailed Stats" />
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/detailed_stats.svg" width="100%" alt="Activity" />
   </div>
 </div>
 
