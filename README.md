@@ -129,8 +129,10 @@
 
 </div>
 
-## 🏆 GitHub Trophies & Achievements
+## 🏆 Trophies and Badges
 <div align="center">
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg" width="100%" alt="Trophies" />
+  <br>
   <table align="center">
     <tr>
       <td><img src="https://img.shields.io/badge/Achievement-Pull_Shark-blue?style=for-the-badge&logo=github" alt="Pull Shark" /></td>
