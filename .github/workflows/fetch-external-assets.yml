@@ -18,21 +18,21 @@ jobs:
       - name: Create assets directory
         run: mkdir -p assets
 
-      - name: Fetch Headers (Increased Font Size)
+      - name: Fetch Headers (Ultra-Wide for Full Visibility)
         run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=45&center=true&vCenter=true&width=1800&height=120&lines=%F0%9F%8C%8E+WELCOME+TO+MY+DIGITAL+WORLD+%F0%9F%8C%8E" -o assets/typing_header_world.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=42&center=true&vCenter=true&width=1800&height=120&lines=%F0%9F%91%8B+Hi,+I%27m+Sahitya+Singh!" -o assets/typing_header_hi.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=45&center=true&vCenter=true&width=2400&height=120&lines=%F0%9F%8C%8E+WELCOME+TO+MY+DIGITAL+WORLD+%F0%9F%8C%8E" -o assets/typing_header_world.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=42&center=true&vCenter=true&width=2400&height=120&lines=%F0%9F%91%8B+Hi,+I%27m+Sahitya+Singh!" -o assets/typing_header_hi.svg
 
       - name: Fetch Typing Thunder Separator
         run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFDA03&size=22&center=true&width=1500&height=50&lines=%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1" -o assets/typing_thunder.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFDA03&size=22&center=true&width=2000&height=50&lines=%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1" -o assets/typing_thunder.svg
 
-      - name: Fetch About Me Lines (Increased Font Size)
+      - name: Fetch About Me Lines (Ultra-Wide for Full Visibility)
         run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=1500&height=70&lines=%F0%9F%92%BB+Tech+Explorer+%7C+Open+Source+Contributor..." -o assets/typing_about_1.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=1500&height=70&lines=%F0%9F%8F%AB+1st+Year+Student+at+NST+Bengaluru..." -o assets/typing_about_2.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=1500&height=70&lines=%F0%9F%A7%A9+Exploring+Machine+Learning+and+OpenCV..." -o assets/typing_about_3.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=1500&height=70&lines=%E2%9A%A1+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_about_4.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=2000&height=70&lines=%F0%9F%92%BB+Tech+Explorer+%7C+Open+Source+Contributor..." -o assets/typing_about_1.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=2000&height=70&lines=%F0%9F%8F%AB+1st+Year+Student+at+NST+Bengaluru..." -o assets/typing_about_2.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=2000&height=70&lines=%F0%9F%A7%A9+Exploring+Machine+Learning+and+OpenCV..." -o assets/typing_about_3.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=2000&height=70&lines=%E2%9A%A1+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_about_4.svg
 
       - name: Fetch GitHub Profile Stats
         run: |
@@ -48,15 +48,15 @@ jobs:
           curl -L "https://img.shields.io/badge/Badge-Layer5_First_Design-orange?style=for-the-badge" -o assets/badge_layer5.svg
           curl -L "https://img.shields.io/badge/Status-Active_Contributor-success?style=for-the-badge&logo=github" -o assets/badge_active.svg
 
-      - name: Fetch Funky Question of the Day (Increased Font Size)
+      - name: Fetch Funky Question of the Day (Ultra-Wide for Full Visibility)
         run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=1500&height=70&lines=%F0%9F%A4%94+Why+do+programmers+prefer+Dark+Mode%3F" -o assets/qotd_question.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=32CD32&size=28&center=true&vCenter=true&width=1500&height=70&lines=%F0%9F%92%A1+Because+light+attracts+bugs!" -o assets/qotd_answer.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=28&center=true&vCenter=true&width=2000&height=70&lines=%F0%9F%A4%94+Why+do+programmers+prefer+Dark+Mode%3F" -o assets/qotd_question.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=32CD32&size=28&center=true&vCenter=true&width=2000&height=70&lines=%F0%9F%92%A1+Because+light+attracts+bugs!" -o assets/qotd_answer.svg
 
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/
-          git commit -m "Perfect Scaling: Optimized dimensions for ultra-clear upscaled visuals 🚀✨" || echo "No changes to commit"
+          git commit -m "Ultra-wide SVGs: Maximum visibility with large fonts 🚀✨" || echo "No changes to commit"
           git push
