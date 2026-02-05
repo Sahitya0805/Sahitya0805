@@ -7,34 +7,28 @@
 
 <div align="center">
 
-  <!-- Header: Floating Neon SVGs -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/header_world.svg" width="800" />
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/header_hi.svg" width="600" />
+  <!-- Header: Reliable Typing SVGs (Served Locally) -->
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_world.svg" width="800" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg" width="700" />
   
-  <br>
-  
-  <!-- Social Badges -->
-  <p>
-    <img src="https://komarev.com/ghpvc/?username=Sahitya0805&color=1E90FF&style=for-the-badge" alt="Profile Views" />
-    <img src="https://img.shields.io/github/followers/Sahitya0805?label=Followers&style=for-the-badge&color=FFDA03" alt="Followers" />
-    <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=32CD32&label=Stars" alt="Stars" />
+  <p align="center">
+    <img src="https://komarev.com/ghpvc/?username=Sahitya0805&color=1E90FF&style=for-the-badge" />
+    <img src="https://img.shields.io/github/followers/Sahitya0805?label=Followers&style=for-the-badge&color=FFDA03" />
+    <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=32CD32&label=Stars" />
   </p>
-
-  <!-- THUNDER SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg" width="1000" /></p>
 
 </div>
 
 <!-- About Me Section -->
 ## 🧠 About Me
 <div align="center">
-  <!-- Static Bio Text -->
-  <h3 align="center" style="text-shadow: 0 0 10px #00FF00;">
-    💻 Tech Explorer | Open Source Contributor<br>
-    🏫 1st Year @ NST Bengaluru<br>
-    🧩 Exploring Machine Learning and OpenCV<br>
-    ⚡ Motto: "Dream -> Build -> Repeat"
-  </h3>
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_1.svg" width="1000" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_2.svg" width="1000" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_3.svg" width="1000" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_4.svg" width="1000" />
+  </p>
   
   <!-- Box 1: Activity & Specs (Ultra Reliable Local Assets) -->
   <table align="center">
