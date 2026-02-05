@@ -60,11 +60,15 @@
 
  <br>
 
- <!-- GitHub Stats Section -->
+ <!-- Digital Footprint (Replaced Broken Cards with Badges) -->
  <h3>📊 Digital Footprint</h3>
  <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Sahitya0805&show_icons=true&theme=gotham&hide_border=true&bg_color=000000" height="150" alt="Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=gotham&hide_border=true&bg_color=000000" height="150" alt="Langs" />
+  <img src="https://img.shields.io/github/followers/Sahitya0805?style=for-the-badge&color=00ff00&labelColor=black&logo=github" alt="Followers" />
+  <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=00ff00&labelColor=black&logo=github" alt="Stars" />
+  <img src="https://img.shields.io/github/forks/Sahitya0805?style=for-the-badge&color=00ff00&labelColor=black&logo=github" alt="Forks" />
+  <br>
+  <img src="https://img.shields.io/github/issues/Sahitya0805/Sahitya0805?style=for-the-badge&color=00ff00&labelColor=black&logo=github" alt="Issues" />
+  <img src="https://img.shields.io/github/issues-pr/Sahitya0805/Sahitya0805?style=for-the-badge&color=00ff00&labelColor=black&logo=github" alt="PRs" />
  </p>
 
  <!-- Snake Animation -->
@@ -83,8 +87,9 @@
   <a href="https://www.instagram.com/sahit_ya8050?igsh=YXNpY2p5Y3ZqMHRv"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/></a>
  </p>
 
+ <!-- Removed broken footer animation -->
  <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00ff00&height=100&section=footer" width="100%" />
+  <b><i>Code Your Way To The Future 🚀</i></b>
  </p>
 
 </div>
