@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="60" viewBox="0 0 800 60">
+  <defs>
+    <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <text x="50%" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-weight="bold" font-size="40" fill="#FFFFFF" filter="url(#neonGlow)" style="text-shadow: 0 0 10px #1E90FF, 0 0 20px #1E90FF;">
+    🌎 Welcome to my Digital World 🌎
+  </text>
+</svg>
