@@ -20,8 +20,8 @@
     <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=32CD32&label=Stars" alt="Stars" />
   </p>
 
-  <!-- NEON SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/neon_separator.gif" width="100%" />
+  <!-- THUNDER SEPARATOR -->
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
 
 </div>
 
@@ -38,8 +38,8 @@
 </div>
 
 <div align="center">
-  <!-- NEON SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/neon_separator.gif" width="100%" />
+  <!-- THUNDER SEPARATOR -->
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
 </div>
 
 <!-- Tech Arsenal -->
@@ -64,8 +64,8 @@
 </div>
 
 <div align="center">
-  <!-- NEON SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/neon_separator.gif" width="100%" />
+  <!-- THUNDER SEPARATOR -->
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
 </div>
 
 <!-- GitHub Stats Section -->
@@ -95,8 +95,8 @@
 </div>
 
 <div align="center">
-  <!-- NEON SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/neon_separator.gif" width="100%" />
+  <!-- THUNDER SEPARATOR -->
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
 </div>
 
 ## 🐍 Watch the Snake Eat My Contributions!
@@ -105,8 +105,8 @@
 </p>
 
 <div align="center">
-  <!-- NEON SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/neon_separator.gif" width="100%" />
+  <!-- THUNDER SEPARATOR -->
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
 </div>
 
 </div>
