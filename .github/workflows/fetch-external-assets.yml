@@ -79,11 +79,11 @@ jobs:
           curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=1000&lines=%F0%9F%A7%A9+Exploring+Machine+Learning+and+OpenCV..." -o assets/typing_about_3.svg
           curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=1000&lines=%E2%9A%A1+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_about_4.svg
 
-      - name: Fetch Stats and Trophies (Alternative Proxies)
+      - name: Fetch Stats and Trophies (High Visibility)
         run: |
           curl -L "https://github-readme-stats-alpha.vercel.app/api?username=Sahitya0805&show_icons=true&theme=tokyonight&hide=prs,issues" -o assets/github_stats_specs.svg
           curl -L "https://github-readme-stats-alpha.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=tokyonight" -o assets/top_langs_specs.svg
-          curl -L "https://github-profile-trophy-nu.vercel.app/?username=Sahitya0805&theme=tokyonight&no-frame=true" -o assets/trophies.svg
+          curl -L "https://github-profile-trophy-nu.vercel.app/?username=Sahitya0805&theme=radical" -o assets/trophies.svg
 
       - name: Commit and Push
         run: |
