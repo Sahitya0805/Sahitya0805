@@ -39,6 +39,30 @@ jobs:
         run: |
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=1000&lines=💻+Tech+Explorer+|+Open+Source+Contributor...;🏫+1st+Year+Student+at+NST+Bengaluru...;🧩+Exploring+Machine+Learning+and+OpenCV...;⚡+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_bio.svg
 
+      - name: Fetch GitHub Stats Card
+        run: |
+          curl -L "https://github-readme-stats.vercel.app/api?username=Sahitya0805&show_icons=true&theme=gotham&hide_border=true&bg_color=000000" -o assets/github_stats.svg
+
+      - name: Fetch Top Langs
+        run: |
+          curl -L "https://github-readme-stats.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=gotham&hide_border=true&bg_color=000000" -o assets/top_langs.svg
+
+      - name: Fetch Profile Details
+        run: |
+          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sahitya0805&theme=github_dark" -o assets/profile_details.svg
+
+      - name: Fetch Productive Time
+        run: |
+          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Sahitya0805&theme=github_dark&utcOffset=8" -o assets/productive_time.svg
+
+      - name: Fetch Repos Per Language
+        run: |
+          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Sahitya0805&theme=github_dark" -o assets/repos_per_language.svg
+
+      - name: Fetch Most Commit Language
+        run: |
+          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Sahitya0805&theme=github_dark" -o assets/most_commit_language.svg
+
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
