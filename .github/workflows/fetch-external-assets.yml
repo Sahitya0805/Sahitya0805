@@ -3,10 +3,35 @@ name: Fetch External Assets
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 on:
   schedule:
-- cron: "0 */12 * * *"
+    - cron: "0 */12 * * *"
+
   workflow_dispatch:
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -24,8 +49,32 @@ jobs:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
       - name: Create assets directory
         run: mkdir -p assets
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -33,16 +82,3 @@ jobs:
       - name: Fetch Typing SVG 1 (Header)
         run: |
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=35&center=true&vCenter=true&width=800&lines=🌎+WELCOME+TO+MY+DIGITAL+WORLD+🌎" -o assets/typing_header.svg
-
-
-
-
-      - name: Fetch Typing SVG 2 (Hi)
-        run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFFFFF&size=30&center=true&vCenter=true&width=700&lines=👋+Hi,+I'm+Sahitya+Singh!" -o assets/typing_hi.svg
-
-
-
-
-      - name: Fetch Typing SVG 3 (Separator)
-        run: |
