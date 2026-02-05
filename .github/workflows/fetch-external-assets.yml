@@ -18,10 +18,6 @@ jobs:
       - name: Create assets directory
         run: mkdir -p assets
 
-      - name: Fetch Trophies
-        run: |
-          curl -L "https://github-profile-trophy.vercel.app/?username=Sahitya0805&theme=tokyonight&no-frame=true&margin-w=15&row=1&column=6&title=MultiLanguage,PullRequest,Repositories,Experience,Commits,Followers,Issues" -o assets/trophies.svg
-
       - name: Fetch Typing SVG 1 (Header)
         run: |
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=35&center=true&vCenter=true&width=800&lines=🌎+WELCOME+TO+MY+DIGITAL+WORLD+🌎" -o assets/typing_header.svg
