@@ -1,35 +1,62 @@
 name: Fetch External Assets
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */12 * * *" # Every 12 hours
+  workflow_dispatch:
 
 jobs:
   fetch-and-save:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Fetch Assets
+      - name: Create assets directory
+        run: mkdir -p assets
+
+      - name: Fetch Headers (Ultra Upscale v2)
         run: |
-          mkdir -p assets
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=20&center=true&vCenter=true&width=1000&lines=%F0%9F%8C%8E+WELCOME+TO+MY+DIGITAL+WORLD+%F0%9F%8C%8E" -o assets/typing_header_world.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=16&center=true&vCenter=true&width=1000&lines=%F0%9F%91%8B+Hi,+I%27m+Sahitya+Singh!" -o assets/typing_header_hi.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%92%BB+Tech+Explorer+%7C+Open+Source+Contributor..." -o assets/typing_about_1.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%8F%AB+1st+Year+Student+at+NST+Bengaluru..." -o assets/typing_about_2.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%A7%A9+Exploring+Machine+Learning+and+OpenCV..." -o assets/typing_about_3.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%E2%9A%A1+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_about_4.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%A4%94+Why+don%27t+programmers+like+nature%3F" -o assets/qotd_question.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=32CD32&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%92%A1+Answer:+It+has+too+many+bugs!" -o assets/qotd_answer.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=50&center=true&vCenter=true&width=1500&height=100&lines=%F0%9F%8C%8E+WELCOME+TO+MY+DIGITAL+WORLD+%F0%9F%8C%8E" -o assets/typing_header_world.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=45&center=true&vCenter=true&width=1500&height=100&lines=%F0%9F%91%8B+Hi,+I%27m+Sahitya+Singh!" -o assets/typing_header_hi.svg
+
+      - name: Fetch Typing Thunder Separator
+        run: |
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFDA03&size=22&center=true&width=1200&height=50&lines=%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1" -o assets/typing_thunder.svg
+
+      - name: Fetch About Me Lines (Ultra Upscale v2)
+        run: |
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=30&center=true&vCenter=true&width=1200&height=60&lines=%F0%9F%92%BB+Tech+Explorer+%7C+Open+Source+Contributor..." -o assets/typing_about_1.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=30&center=true&vCenter=true&width=1200&height=60&lines=%F0%9F%8F%AB+1st+Year+Student+at+NST+Bengaluru..." -o assets/typing_about_2.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=30&center=true&vCenter=true&width=1200&height=60&lines=%F0%9F%A7%A9+Exploring+Machine+Learning+and+OpenCV..." -o assets/typing_about_3.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=30&center=true&vCenter=true&width=1200&height=60&lines=%E2%9A%A1+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_about_4.svg
+
+      - name: Fetch GitHub Profile Stats
+        run: |
+          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sahitya0805&theme=github_dark" -o assets/profile_details.svg
+          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Sahitya0805&theme=github_dark" -o assets/repos_per_language.svg
+          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Sahitya0805&theme=github_dark" -o assets/most_commit_language.svg
+          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Sahitya0805&theme=github_dark&utcOffset=8" -o assets/productive_time.svg
+
+      - name: Fetch Trophies and Badges
+        run: |
+          curl -L "https://github-profile-trophy-nu.vercel.app/?username=Sahitya0805&theme=radical" -o assets/trophies.svg
+          curl -L "https://img.shields.io/badge/Achievement-Pull_Shark-blue?style=for-the-badge&logo=github" -o assets/badge_pull_shark.svg
+          curl -L "https://img.shields.io/badge/Badge-Layer5_First_Design-orange?style=for-the-badge" -o assets/badge_layer5.svg
+          curl -L "https://img.shields.io/badge/Status-Active_Contributor-success?style=for-the-badge&logo=github" -o assets/badge_active.svg
+
+      - name: Fetch Funky Question of the Day (Ultra Upscale v2)
+        run: |
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=30&center=true&vCenter=true&width=1200&height=60&lines=%F0%9F%A4%94+Why+do+programmers+prefer+Dark+Mode%3F" -o assets/qotd_question.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=32CD32&size=30&center=true&vCenter=true&width=1200&height=60&lines=%F0%9F%92%A1+Because+light+attracts+bugs!" -o assets/qotd_answer.svg
 
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add assets/
-          git commit -m "Final asset refresh with fixed YAML and safe sizes" || echo "No changes"
+          git commit -m "Ultra-Upscale v2: Massive fonts, taller SVGs, and funky QOTD 🚀✨" || echo "No changes to commit"
           git push
