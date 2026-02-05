@@ -1,10 +1,14 @@
 name: Fetch External Assets
 
 
+
+
 on:
   schedule:
-    - cron: "0 */12 * * *"→ Runs at 0 minutes past the hour, every 12 hours # Every 12 hours
+- cron: "0 */12 * * *"
   workflow_dispatch:
+
+
 
 
 jobs:
@@ -18,8 +22,12 @@ jobs:
         uses: actions/checkout@v3
 
 
+
+
       - name: Create assets directory
         run: mkdir -p assets
+
+
 
 
       - name: Fetch Typing SVG 1 (Header)
@@ -27,17 +35,14 @@ jobs:
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=35&center=true&vCenter=true&width=800&lines=🌎+WELCOME+TO+MY+DIGITAL+WORLD+🌎" -o assets/typing_header.svg
 
 
+
+
       - name: Fetch Typing SVG 2 (Hi)
         run: |
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFFFFF&size=30&center=true&vCenter=true&width=700&lines=👋+Hi,+I'm+Sahitya+Singh!" -o assets/typing_hi.svg
 
 
+
+
       - name: Fetch Typing SVG 3 (Separator)
         run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡" -o assets/typing_separator.svg
-
-
-      - name: Fetch Typing SVG 4 (About Me)
-        # Combine multiple lines into one SVG fetch for simplicity if possible, or just fetch the one complex one
-        run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=1000&lines=💻+Tech+Explorer+|+Open+Source+Contributor...;🏫+1st+Year+Student+at+NST+Bengaluru...;🧩+Exploring+Machine+Learning+and+OpenCV...;⚡+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_bio.svg
