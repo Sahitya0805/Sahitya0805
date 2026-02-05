@@ -63,17 +63,17 @@ jobs:
         run: |
           curl -L "https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" -o assets/neon_separator.gif
 
-      - name: Fetch Stats Box 1 (Activity)
+      - name: Fetch Stats Box (Specs)
         run: |
-          curl -L "https://github-readme-stats.vercel.app/api?username=Sahitya0805&show_icons=true&theme=tokyonight&hide=prs,issues" -o assets/github_stats_specs.svg
+          curl -L "https://github-readme-stats-sigma-five.vercel.app/api?username=Sahitya0805&show_icons=true&theme=tokyonight&hide=prs,issues" -o assets/github_stats_specs.svg
 
-      - name: Fetch Stats Box 2 (Languages)
+      - name: Fetch Languages Box
         run: |
-          curl -L "https://github-readme-stats.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=tokyonight" -o assets/top_langs_specs.svg
+          curl -L "https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=tokyonight" -o assets/top_langs_specs.svg
 
-      - name: Fetch Trophies (Direct Reliable Fallback)
+      - name: Fetch Trophies (Alternative)
         run: |
-          curl -L "https://github-profile-trophy.vercel.app/?username=Sahitya0805&theme=tokyonight&no-frame=true" -o assets/trophies.svg
+          curl -L "https://github-profile-trophy-nu.vercel.app/?username=Sahitya0805&theme=tokyonight&no-frame=true" -o assets/trophies.svg
 
       - name: Commit and Push
         run: |
