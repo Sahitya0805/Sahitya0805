@@ -30,35 +30,9 @@
     <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_4.svg" width="1000" />
   </p>
   
-  <!-- Box 1: Activity & Specs (Ultra Reliable Local Assets) -->
-  <table align="center">
-    <tr>
-      <td width="50%" align="center">
-        <h3 style="text-shadow: 0 0 10px #00FF00;">📈 GitHub Journey</h3>
-        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/profile_details.svg" width="100%" alt="Activity" />
-      </td>
-      <td width="50%" align="center">
-        <h3 style="text-shadow: 0 0 10px #00FF00;">🔥 Commit Productivity</h3>
-        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/productive_time.svg" width="100%" alt="Specs" />
-      </td>
-    </tr>
-    <tr>
-      <td width="50%" align="center">
-        <h3 style="text-shadow: 0 0 10px #00FF00;">📊 Languages</h3>
-        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/most_commit_language.svg" width="100%" alt="Langs" />
-      </td>
-      <td width="50%" align="center">
-        <h3 style="text-shadow: 0 0 10px #00FF00;">🎨 Repo Stats</h3>
-        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/repos_per_language.svg" width="100%" alt="Repos" />
-      </td>
-    </tr>
-  </table>
 </div>
 
-<div align="center">
-  <!-- THUNDER SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
-</div>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg" width="1000" /></p>
 
 <!-- Tech Arsenal -->
 ## 🛠️ Tech Arsenal
@@ -81,10 +55,7 @@
 
 </div>
 
-<div align="center">
-  <!-- THUNDER SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
-</div>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg" width="1000" /></p>
 
 <!-- GitHub Stats Section -->
 ## 📊 GitHub Stats
@@ -112,20 +83,14 @@
 
 </div>
 
-<div align="center">
-  <!-- THUNDER SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
-</div>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg" width="1000" /></p>
 
 ## 🐍 Watch the Snake Eat My Contributions!
 <p align="center">
   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/github-contribution-grid-snake-dark.svg" alt="snake animation" width="100%" />
 </p>
 
-<div align="center">
-  <!-- THUNDER SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/thunder_separator.svg" width="100%" />
-</div>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg" width="1000" /></p>
 
 </div>
 
