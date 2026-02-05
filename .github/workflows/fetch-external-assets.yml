@@ -63,16 +63,26 @@ jobs:
         run: |
           curl -L "https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" -o assets/neon_separator.gif
 
-      - name: Fetch Stats Box (Specs)
+      - name: Fetch Typing Thunder Line
         run: |
-          curl -L "https://github-readme-stats-sigma-five.vercel.app/api?username=Sahitya0805&show_icons=true&theme=tokyonight&hide=prs,issues" -o assets/github_stats_specs.svg
+          curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1" -o assets/typing_thunder.svg
 
-      - name: Fetch Languages Box
+      - name: Fetch Digital World Headers
         run: |
-          curl -L "https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=tokyonight" -o assets/top_langs_specs.svg
+          curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=1E90FF&size=35&center=true&vCenter=true&width=800&lines=%F0%9F%8C%8E+WELCOME+TO+MY+DIGITAL+WORLD+%F0%9F%8C%8E" -o assets/typing_header_world.svg
+          curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=FFFFFF&size=30&center=true&vCenter=true&width=700&lines=%F0%9F%91%8B+Hi,+I'm+Sahitya+Singh!" -o assets/typing_header_hi.svg
 
-      - name: Fetch Trophies (Alternative)
+      - name: Fetch About Me Typing Lines
         run: |
+          curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=1000&lines=%F0%9F%92%BB+Tech+Explorer+%7C+Open+Source+Contributor..." -o assets/typing_about_1.svg
+          curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=1000&lines=%F0%9F%8F%AB+1st+Year+Student+at+NST+Bengaluru..." -o assets/typing_about_2.svg
+          curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=1000&lines=%F0%9F%A7%A9+Exploring+Machine+Learning+and+OpenCV..." -o assets/typing_about_3.svg
+          curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=1000&lines=%E2%9A%A1+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_about_4.svg
+
+      - name: Fetch Stats and Trophies (Alternative Proxies)
+        run: |
+          curl -L "https://github-readme-stats-alpha.vercel.app/api?username=Sahitya0805&show_icons=true&theme=tokyonight&hide=prs,issues" -o assets/github_stats_specs.svg
+          curl -L "https://github-readme-stats-alpha.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=tokyonight" -o assets/top_langs_specs.svg
           curl -L "https://github-profile-trophy-nu.vercel.app/?username=Sahitya0805&theme=tokyonight&no-frame=true" -o assets/trophies.svg
 
       - name: Commit and Push
