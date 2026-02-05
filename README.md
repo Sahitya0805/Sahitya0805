@@ -66,17 +66,20 @@
  
  <!-- Profile Details & Stats Card (Served Locally) -->
  <p align="center">
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/0-profile-details.svg" height="160" alt="Profile Details" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/profile_details.svg" height="160" alt="Profile Details" />
  </p>
  <div style="display: flex; justify-content: center; margin-top: 10px;">
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/1-repos-per-language.svg" width="400" alt="Repos per Language" />
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/2-most-commit-language.svg" width="400" alt="Most Commit Language" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/repos_per_language.svg" width="400" alt="Repos per Language" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/most_commit_language.svg" width="400" alt="Most Commit Language" />
  </div>
  <br>
  <p align="center">
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/3-stats.svg" width="400" alt="Stats" />
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/4-productive-time.svg" width="400" alt="Productive Time" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/github_stats.svg" width="400" alt="Stats" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/productive_time.svg" width="400" alt="Productive Time" />
  </p>
+ <div style="display: flex; justify-content: center; margin-top: 10px;">
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/top_langs.svg" width="400" alt="Top Languages" />
+ </div>
 
 </div>
 
