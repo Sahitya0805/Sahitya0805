@@ -36,30 +36,26 @@
     ⚡ Motto: "Dream -> Build -> Repeat"
   </h3>
   
-  <!-- Box 1: Activity (Using reliable Summary Cards asset) -->
+  <!-- Box 1: Activity & Specs (Ultra Reliable Local Assets) -->
   <table align="center">
     <tr>
       <td width="50%" align="center">
-        <h4 style="text-shadow: 0 0 5px #00FF00;">📈 GitHub Journey</h4>
+        <h3 style="text-shadow: 0 0 10px #00FF00;">📈 GitHub Journey</h3>
         <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/profile_details.svg" width="100%" alt="Activity" />
       </td>
       <td width="50%" align="center">
-        <h4 style="text-shadow: 0 0 5px #00FF00;">⚡ Specs & Stats</h4>
-        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/github_stats_specs.svg" width="100%" alt="Specs" />
+        <h3 style="text-shadow: 0 0 10px #00FF00;">🔥 Commit Productivity</h3>
+        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/productive_time.svg" width="100%" alt="Specs" />
       </td>
     </tr>
-  </table>
-  
-  <br>
-  
-  <!-- Box 2: Mastered Languages & Productivity -->
-  <table align="center">
     <tr>
       <td width="50%" align="center">
-        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/top_langs_specs.svg" width="100%" alt="Langs" />
+        <h3 style="text-shadow: 0 0 10px #00FF00;">📊 Languages</h3>
+        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/most_commit_language.svg" width="100%" alt="Langs" />
       </td>
       <td width="50%" align="center">
-        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/productive_time.svg" width="100%" alt="Time" />
+        <h3 style="text-shadow: 0 0 10px #00FF00;">🎨 Repo Stats</h3>
+        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/repos_per_language.svg" width="100%" alt="Repos" />
       </td>
     </tr>
   </table>
