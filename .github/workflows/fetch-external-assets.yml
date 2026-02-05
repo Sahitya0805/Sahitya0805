@@ -1,66 +1,35 @@
 name: Fetch External Assets
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 on:
   workflow_dispatch:
   schedule:
     - cron: "0 */12 * * *"
 
+jobs:
+  fetch-and-save:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
+      - name: Fetch Assets
+        run: |
+          mkdir -p assets
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=20&center=true&vCenter=true&width=1000&lines=%F0%9F%8C%8E+WELCOME+TO+MY+DIGITAL+WORLD+%F0%9F%8C%8E" -o assets/typing_header_world.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=16&center=true&vCenter=true&width=1000&lines=%F0%9F%91%8B+Hi,+I%27m+Sahitya+Singh!" -o assets/typing_header_hi.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%92%BB+Tech+Explorer+%7C+Open+Source+Contributor..." -o assets/typing_about_1.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%8F%AB+1st+Year+Student+at+NST+Bengaluru..." -o assets/typing_about_2.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%A7%A9+Exploring+Machine+Learning+and+OpenCV..." -o assets/typing_about_3.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%E2%9A%A1+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_about_4.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%A4%94+Why+don%27t+programmers+like+nature%3F" -o assets/qotd_question.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=32CD32&size=14&center=true&vCenter=true&width=1000&lines=%F0%9F%92%A1+Answer:+It+has+too+many+bugs!" -o assets/qotd_answer.svg
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/
+          git commit -m "Final asset refresh with fixed YAML and safe sizes" || echo "No changes"
+          git push
