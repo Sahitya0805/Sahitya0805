@@ -109,6 +109,28 @@
   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/neon_separator.gif" width="100%" />
 </div>
 
+</div>
+
+## 🏆 GitHub Trophies
+<p align="center">
+  <!-- Trophies (Direct Link Fallback) -->
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=Sahitya0805&theme=tokyonight&no-frame=true&margin-w=15&row=1&column=6&title=MultiLanguage,PullRequest,Repositories,Experience,Commits,Followers,Issues" width="100%" alt="Trophies" />
+  </a>
+</p>
+
+<!-- Layer5 Badge -->
+<div align="center">
+    <a href="https://cloud.layer5.io/user/55ff6b45-c08f-4ede-9cb3-27cc86a92616?tab=badges&badge=first-design" alt="First Design" >
+        <img width="175px" height="252px" src="https://badges.layer5.io/assets/badges/first-design/first-design.png" alt="First Design" />
+    </a>
+    <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup><a href="https://badges.layer5.io"></a></sup>
+</div>
+
+<div align="center">
+  <!-- NEON SEPARATOR -->
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/neon_separator.gif" width="100%" />
+</div>
 
 ## 🌐 Connect With Me
 <p align="center">
