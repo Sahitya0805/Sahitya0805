@@ -36,20 +36,33 @@
     ⚡ Motto: "Dream -> Build -> Repeat"
   </h3>
   
-  <!-- Detailed Stats Boxes (Two Distinct Boxes) -->
+  <!-- Box 1: Activity (Using reliable Summary Cards asset) -->
   <table align="center">
     <tr>
-      <td><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/github_stats_specs.svg" height="180em" alt="Specs" /></td>
-      <td><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/top_langs_specs.svg" height="180em" alt="Langs" /></td>
+      <td width="50%" align="center">
+        <h4 style="text-shadow: 0 0 5px #00FF00;">📈 GitHub Journey</h4>
+        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/profile_details.svg" width="100%" alt="Activity" />
+      </td>
+      <td width="50%" align="center">
+        <h4 style="text-shadow: 0 0 5px #00FF00;">⚡ Specs & Stats</h4>
+        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/github_stats_specs.svg" width="100%" alt="Specs" />
+      </td>
     </tr>
   </table>
   
   <br>
   
-  <!-- Activity Stats Box -->
-  <div align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/detailed_stats.svg" width="100%" alt="Activity" />
-  </div>
+  <!-- Box 2: Mastered Languages & Productivity -->
+  <table align="center">
+    <tr>
+      <td width="50%" align="center">
+        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/top_langs_specs.svg" width="100%" alt="Langs" />
+      </td>
+      <td width="50%" align="center">
+        <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/productive_time.svg" width="100%" alt="Time" />
+      </td>
+    </tr>
+  </table>
 </div>
 
 <div align="center">
