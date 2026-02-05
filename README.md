@@ -135,20 +135,15 @@
 
 </div>
 
-## 🏆 GitHub Trophies
-<p align="center">
-  <!-- Trophies (Generated Locally by trophies.yml) -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg" width="100%" alt="Trophies" />
-</p>
-
-<!-- Layer5 Badge & Achievements -->
+## 🏆 GitHub Trophies & Achievements
 <div align="center">
-    <a href="https://github.com/Sahitya0805?tab=achievements" alt="Pull Shark">
-        <img width="120px" src="https://img.shields.io/badge/Achievement-Pull%20Shark-blue?style=for-the-badge&logo=github" alt="Pull Shark" />
-    </a>
-    <a href="https://cloud.layer5.io/user/55ff6b45-c08f-4ede-9cb3-27cc86a92616?tab=badges&badge=first-design" alt="First Design" >
-        <img width="120px" src="https://badges.layer5.io/assets/badges/first-design/first-design.png" alt="First Design" />
-    </a>
+  <table align="center">
+    <tr>
+      <td><img src="https://img.shields.io/badge/Achievement-Pull_Shark-blue?style=for-the-badge&logo=github" alt="Pull Shark" /></td>
+      <td><img src="https://img.shields.io/badge/Badge-Layer5_First_Design-orange?style=for-the-badge" alt="Layer5" /></td>
+      <td><img src="https://img.shields.io/badge/Status-Active_Contributor-success?style=for-the-badge&logo=github" alt="Active" /></td>
+    </tr>
+  </table>
 </div>
 
 <div align="center">
