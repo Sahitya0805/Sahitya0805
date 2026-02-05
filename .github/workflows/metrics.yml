@@ -11,13 +11,19 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
+          filename: assets/trophies.svg
+
+      - name: Detailed Stats and Achievements
+        uses: lowlighter/metrics@latest
+        with:
           token: ${{ github.token }}
           user: Sahitya0805
-          template: classic
-          base: ""
+          filename: assets/detailed_stats.svg
+          base: activity, community
+          base_indepth: yes
+          plugin_achievements: yes
+          plugin_achievements_display: compact
+          plugin_achievements_only: pull-shark
+          plugin_followup: yes
+          plugin_followup_sections: user
           config_timezone: Asia/Kolkata
-          plugin_trophies: yes
-          plugin_trophies_plugin: yes
-          plugin_trophies_theme: tokyonight
-          plugin_trophies_threshold: C
-          filename: assets/trophies.svg

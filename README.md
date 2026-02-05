@@ -7,9 +7,10 @@
 
 <div align="center">
 
-  <!-- Header: Static HTML (100% Reliable "Big" Text) -->
-  <h1 align="center" style="font-size: 50px;">🌎 Welcome to my Digital World 🌎</h1>
-  <h2 align="center">👋 Hi, I'm Sahitya Singh</h2>
+  <!-- Header: Neon Glowing SVGs (Served Locally) -->
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/header_world.svg" width="800" />
+  <br>
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/header_hi.svg" width="600" />
   
   <br>
   
@@ -28,13 +29,18 @@
 <!-- About Me Section -->
 ## 🧠 About Me
 <div align="center">
-  <!-- Static Bio Text (Reliable Replacement for Broken Typing Bio) -->
-  <h3 align="center">
+  <!-- Static Bio Text -->
+  <h3 align="center" style="text-shadow: 0 0 10px #00FF00;">
     💻 Tech Explorer | Open Source Contributor<br>
     🏫 1st Year @ NST Bengaluru<br>
     🧩 Exploring Machine Learning and OpenCV<br>
     ⚡ Motto: "Dream -> Build -> Repeat"
   </h3>
+  
+  <!-- Detailed Stats Box (Generated Locally by metrics.yml) -->
+  <div align="center">
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/detailed_stats.svg" width="600" alt="Detailed Stats" />
+  </div>
 </div>
 
 <div align="center">
