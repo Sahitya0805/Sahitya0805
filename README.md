@@ -8,8 +8,8 @@
 <div align="center">
 
   <!-- Header: Reliable Typing SVGs (Served Locally) -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_world.svg" width="800" />
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg" width="700" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_world.svg" width="1000" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg" width="1000" />
   
   <p align="center">
     <img src="https://komarev.com/ghpvc/?username=Sahitya0805&color=1E90FF&style=for-the-badge" />
@@ -101,9 +101,9 @@
   </p>
   <table align="center">
     <tr>
-      <td align="center"><img src="https://img.shields.io/badge/Achievement-Pull_Shark-blue?style=for-the-badge&logo=github" alt="Pull Shark" /></td>
-      <td align="center"><img src="https://img.shields.io/badge/Badge-Layer5_First_Design-orange?style=for-the-badge" alt="Layer5" /></td>
-      <td align="center"><img src="https://img.shields.io/badge/Status-Active_Contributor-success?style=for-the-badge&logo=github" alt="Active" /></td>
+      <td align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/badge_pull_shark.svg" alt="Pull Shark" /></td>
+      <td align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/badge_layer5.svg" alt="Layer5" /></td>
+      <td align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/badge_active.svg" alt="Active" /></td>
     </tr>
   </table>
 </div>
