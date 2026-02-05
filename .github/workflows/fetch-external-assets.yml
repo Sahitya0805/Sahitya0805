@@ -85,6 +85,11 @@ jobs:
           curl -L "https://github-readme-stats-alpha.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=tokyonight" -o assets/top_langs_specs.svg
           curl -L "https://github-profile-trophy-nu.vercel.app/?username=Sahitya0805&theme=radical" -o assets/trophies.svg
 
+      - name: Fetch Question of the Day
+        run: |
+          curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=900&lines=%F0%9F%A4%94+Why+don't+programmers+like+nature%3F" -o assets/qotd_question.svg
+          curl -L "https://readme-typing-svg.herokuapp.com?font=Digital-7+Mono&color=32CD32&size=22&center=true&vCenter=true&width=900&lines=%F0%9F%92%A1+Answer:+It+has+too+many+bugs!" -o assets/qotd_answer.svg
+
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
