@@ -70,7 +70,7 @@ jobs:
       - name: Fetch Digital World Headers
         run: |
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=28&center=true&vCenter=true&width=1000&lines=%F0%9F%8C%8E+WELCOME+TO+MY+DIGITAL+WORLD+%F0%9F%8C%8E" -o assets/typing_header_world.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFFFFF&size=25&center=true&vCenter=true&width=1000&lines=%F0%9F%91%8B+Hi,+I'm+Sahitya+Singh!" -o assets/typing_header_hi.svg
+          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=25&center=true&vCenter=true&width=1000&lines=%F0%9F%91%8B+Hi,+I'm+Sahitya+Singh!" -o assets/typing_header_hi.svg
 
       - name: Fetch About Me Typing Lines
         run: |
