@@ -1,0 +1,38 @@
+name: Github Trophy
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Every day at midnight
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Generate Trophies
+        uses: teoxoy/profile-trophy-action@v1.6.0
+        with:
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
+          no_bg: true
+          no_frame: true
+          theme: tokyonight
+          rank: 'SSS,SS,S,AAA,AA,A,B,C'
+          # We will move the output to the assets folder in the next step
+          
+      - name: Organize Assets
+        run: |
+          mkdir -p assets
+          # the action defaults to creating trophies.svg in the root
+          if [ -f "trophy.svg" ]; then
+            mv trophy.svg assets/trophies.svg
+          fi
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/trophies.svg
+          git commit -m "Update profile trophies 🏆" || exit 0
+          git push

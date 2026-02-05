@@ -113,10 +113,8 @@
 
 ## 🏆 GitHub Trophies
 <p align="center">
-  <!-- Trophies (Direct Link Fallback) -->
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=Sahitya0805&theme=tokyonight&no-frame=true&margin-w=15&row=1&column=6&title=MultiLanguage,PullRequest,Repositories,Experience,Commits,Followers,Issues" width="100%" alt="Trophies" />
-  </a>
+  <!-- Trophies (Generated Locally by trophies.yml) -->
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg" width="100%" alt="Trophies" />
 </p>
 
 <!-- Layer5 Badge -->
