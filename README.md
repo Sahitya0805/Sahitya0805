@@ -7,9 +7,9 @@
 <div align="center">
 
   <!-- Header: Typing SVGs (Served Locally) -->
-  <img src="blob/main/assets/typing_header.svg" alt="Welcome to my Digital World" width="800" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header.svg" alt="Welcome to my Digital World" width="800" />
   <br>
-  <img src="blob/main/assets/typing_hi.svg" alt="Hi I'm Sahitya Singh" width="700" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_hi.svg" alt="Hi I'm Sahitya Singh" width="700" />
 
   <br>
 
@@ -20,7 +20,7 @@
     <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=32CD32&label=Stars" alt="Stars" />
   </p>
 
-  <img src="blob/main/assets/typing_separator.svg" width="1000" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_separator.svg" width="1000" />
 
 </div>
 
@@ -28,11 +28,11 @@
 ## 🧠 About Me
 <div align="center">
   <!-- Typing Bio (Served Locally) -->
-  <img src="blob/main/assets/typing_bio.svg" width="1000" alt="Bio Typing Text" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_bio.svg" width="1000" alt="Bio Typing Text" />
 </div>
 
 <div align="center">
-  <img src="blob/main/assets/typing_separator.svg" width="1000" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_separator.svg" width="1000" />
 </div>
 
 <!-- Tech Arsenal -->
@@ -57,7 +57,7 @@
 </div>
 
 <div align="center">
-  <img src="blob/main/assets/typing_separator.svg" width="1000" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_separator.svg" width="1000" />
 </div>
 
 <!-- GitHub Stats Section (Restored Rich Graphs) -->
@@ -66,16 +66,16 @@
  
  <!-- Profile Details & Stats Card (Served Locally) -->
  <p align="center">
-   <img src="blob/main/profile-summary-card-output/solarized_dark/0-profile-details.svg" height="160" alt="Profile Details" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/0-profile-details.svg" height="160" alt="Profile Details" />
  </p>
  <div style="display: flex; justify-content: center; margin-top: 10px;">
-   <img src="blob/main/profile-summary-card-output/solarized_dark/1-repos-per-language.svg" width="400" alt="Repos per Language" />
-   <img src="blob/main/profile-summary-card-output/solarized_dark/2-most-commit-language.svg" width="400" alt="Most Commit Language" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/1-repos-per-language.svg" width="400" alt="Repos per Language" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/2-most-commit-language.svg" width="400" alt="Most Commit Language" />
  </div>
  <br>
  <p align="center">
-   <img src="blob/main/profile-summary-card-output/solarized_dark/3-stats.svg" width="400" alt="Stats" />
-   <img src="blob/main/profile-summary-card-output/solarized_dark/4-productive-time.svg" width="400" alt="Productive Time" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/3-stats.svg" width="400" alt="Stats" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/profile-summary-card-output/solarized_dark/4-productive-time.svg" width="400" alt="Productive Time" />
  </p>
 
 </div>
@@ -84,7 +84,7 @@
 <!-- Contribution Graph (Using reliable Activity Graph if possible, or fallback to Snake) -->
 <!-- Using snake for now as it is reliable and local -->
 <div align="center">
-  <img src="blob/main/assets/typing_separator.svg" width="1000" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_separator.svg" width="1000" />
 </div>
 
 ## 🐍 Watch the Snake Eat My Contributions!
@@ -93,19 +93,19 @@
 </p>
 
 <div align="center">
-  <img src="blob/main/assets/typing_separator.svg" width="1000" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_separator.svg" width="1000" />
 </div>
 
 ## 🏆 GitHub Trophies
 <p align="center">
   <!-- Trophies (Served Locally) -->
-  <img src="blob/main/assets/trophies.svg" width="100%" alt="Trophies" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg" width="100%" alt="Trophies" />
 </p>
 <div><a href="https://cloud.layer5.io/user/55ff6b45-c08f-4ede-9cb3-27cc86a92616?tab=badges&badge=first-design" alt="First Design" ><img width="175px" height="252px" src="https://badges.layer5.io/assets/badges/first-design/first-design.png" alt="First Design" /></a><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<sup><a href="https://badges.layer5.io"></a></sup></div>
 
 
 <div align="center">
-  <img src="blob/main/assets/typing_separator.svg" width="1000" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_separator.svg" width="1000" />
 </div>
 
 
