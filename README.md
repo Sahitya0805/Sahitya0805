@@ -113,8 +113,8 @@
 ## 🤔 Question of the Day
 <div align="center">
   <p align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_question.svg" width="900" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_answer.svg" width="900" />
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_question.svg" width="1000" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_answer.svg" width="1000" />
   </p>
 </div>
 
