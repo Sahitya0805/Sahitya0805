@@ -96,21 +96,29 @@
 
 ## 🏆 Trophies and Badges
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg" width="100%" alt="Trophies" />
-  <br>
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg" width="100%" alt="Trophies" />
+  </p>
   <table align="center">
     <tr>
-      <td><img src="https://img.shields.io/badge/Achievement-Pull_Shark-blue?style=for-the-badge&logo=github" alt="Pull Shark" /></td>
-      <td><img src="https://img.shields.io/badge/Badge-Layer5_First_Design-orange?style=for-the-badge" alt="Layer5" /></td>
-      <td><img src="https://img.shields.io/badge/Status-Active_Contributor-success?style=for-the-badge&logo=github" alt="Active" /></td>
+      <td align="center"><img src="https://img.shields.io/badge/Achievement-Pull_Shark-blue?style=for-the-badge&logo=github" alt="Pull Shark" /></td>
+      <td align="center"><img src="https://img.shields.io/badge/Badge-Layer5_First_Design-orange?style=for-the-badge" alt="Layer5" /></td>
+      <td align="center"><img src="https://img.shields.io/badge/Status-Active_Contributor-success?style=for-the-badge&logo=github" alt="Active" /></td>
     </tr>
   </table>
 </div>
 
+<p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg" width="1000" /></p>
+
+## 🤔 Question of the Day
 <div align="center">
-  <!-- NEON SEPARATOR -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/neon_separator.gif" width="100%" />
+  <p align="center">
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_question.svg" width="900" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_answer.svg" width="900" />
+  </p>
 </div>
+
+<p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg" width="1000" /></p>
 
 ## 🌐 Connect With Me
 <p align="center">
