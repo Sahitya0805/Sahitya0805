@@ -8,15 +8,15 @@
 <div align="center">
 
   <!-- Header: Reliable Typing SVGs (Served Locally) -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_world.svg" width="1000" />
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg" width="1000" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_world.svg" width="10000" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg" width="10000" />
   
   <p align="center">
     <img src="https://komarev.com/ghpvc/?username=Sahitya0805&color=1E90FF&style=for-the-badge" />
     <img src="https://img.shields.io/github/followers/Sahitya0805?label=Followers&style=for-the-badge&color=FFDA03" />
     <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=32CD32&label=Stars" />
   </p>
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg" width="1000" /></p>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg" width="10000" /></p>
 
 </div>
 
@@ -24,10 +24,10 @@
 ## 🧠 About Me
 <div align="center">
   <p align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_1.svg" width="1000" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_2.svg" width="1000" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_3.svg" width="1000" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_4.svg" width="1000" />
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_1.svg" width="10000" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_2.svg" width="10000" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_3.svg" width="10000" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_4.svg" width="10000" />
   </p>
   
 </div>
