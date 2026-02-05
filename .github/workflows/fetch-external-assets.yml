@@ -63,6 +63,10 @@ jobs:
         run: |
           curl -L "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Sahitya0805&theme=github_dark" -o assets/most_commit_language.svg
 
+      - name: Fetch Neon Separator
+        run: |
+          curl -L "https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" -o assets/neon_separator.gif
+
       - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
