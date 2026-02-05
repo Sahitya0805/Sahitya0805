@@ -9,7 +9,7 @@
 
   <!-- Header: Reliable Typing SVGs (Served Locally) -->
   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_world.svg?v=4" width="100%" />
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg?v=3" width="1400" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg?v=5" width="100%" />
   
   <p align="center">
     <img src="https://komarev.com/ghpvc/?username=Sahitya0805&color=1E90FF&style=for-the-badge" />
