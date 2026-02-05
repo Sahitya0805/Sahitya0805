@@ -12,6 +12,6 @@
     </pattern>
   </defs>
   <rect width="1040" height="20" fill="url(#thunderPattern)">
-    <animate attributeName="x" from="0" to="-40" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="x" from="-40" to="0" dur="2s" repeatCount="indefinite" />
   </rect>
 </svg>
