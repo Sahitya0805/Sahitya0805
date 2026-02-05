@@ -1,9 +1,11 @@
 name: Fetch External Assets
 
+
 on:
   schedule:
-    - cron: "0 */12 * * *" # Every 12 hours
+    - cron: "0 */12 * * *"→ Runs at 0 minutes past the hour, every 12 hours # Every 12 hours
   workflow_dispatch:
+
 
 jobs:
   fetch-and-save:
@@ -15,88 +17,27 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
+
       - name: Create assets directory
         run: mkdir -p assets
+
 
       - name: Fetch Typing SVG 1 (Header)
         run: |
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=35&center=true&vCenter=true&width=800&lines=🌎+WELCOME+TO+MY+DIGITAL+WORLD+🌎" -o assets/typing_header.svg
 
+
       - name: Fetch Typing SVG 2 (Hi)
         run: |
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFFFFF&size=30&center=true&vCenter=true&width=700&lines=👋+Hi,+I'm+Sahitya+Singh!" -o assets/typing_hi.svg
+
 
       - name: Fetch Typing SVG 3 (Separator)
         run: |
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡⚡" -o assets/typing_separator.svg
 
+
       - name: Fetch Typing SVG 4 (About Me)
         # Combine multiple lines into one SVG fetch for simplicity if possible, or just fetch the one complex one
         run: |
           curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=22&center=true&vCenter=true&width=1000&lines=💻+Tech+Explorer+|+Open+Source+Contributor...;🏫+1st+Year+Student+at+NST+Bengaluru...;🧩+Exploring+Machine+Learning+and+OpenCV...;⚡+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_bio.svg
-
-      - name: Fetch GitHub Stats Card
-        run: |
-          curl -L "https://github-readme-stats.vercel.app/api?username=Sahitya0805&show_icons=true&theme=gotham&hide_border=true&bg_color=000000" -o assets/github_stats.svg
-
-      - name: Fetch Top Langs
-        run: |
-          curl -L "https://github-readme-stats.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=gotham&hide_border=true&bg_color=000000" -o assets/top_langs.svg
-
-      - name: Fetch Profile Details
-        run: |
-          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Sahitya0805&theme=github_dark" -o assets/profile_details.svg
-
-      - name: Fetch Productive Time
-        run: |
-          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=Sahitya0805&theme=github_dark&utcOffset=8" -o assets/productive_time.svg
-
-      - name: Fetch Repos Per Language
-        run: |
-          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Sahitya0805&theme=github_dark" -o assets/repos_per_language.svg
-
-      - name: Fetch Most Commit Language
-        run: |
-          curl -L "https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Sahitya0805&theme=github_dark" -o assets/most_commit_language.svg
-
-      - name: Fetch Neon Separator
-        run: |
-          curl -L "https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" -o assets/neon_separator.gif
-
-      - name: Fetch Typing Thunder Line
-        run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=FFDA03&size=18&center=true&width=1000&lines=%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1%E2%9A%A1" -o assets/typing_thunder.svg
-
-      - name: Fetch Digital World Headers
-        run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=28&center=true&vCenter=true&width=1000&lines=%F0%9F%8C%8E+WELCOME+TO+MY+DIGITAL+WORLD+%F0%9F%8C%8E" -o assets/typing_header_world.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=1E90FF&size=25&center=true&vCenter=true&width=1000&lines=%F0%9F%91%8B+Hi,+I'm+Sahitya+Singh!" -o assets/typing_header_hi.svg
-
-      - name: Fetch About Me Typing Lines
-        run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=18&center=true&vCenter=true&width=1000&lines=%F0%9F%92%BB+Tech+Explorer+%7C+Open+Source+Contributor..." -o assets/typing_about_1.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=18&center=true&vCenter=true&width=1000&lines=%F0%9F%8F%AB+1st+Year+Student+at+NST+Bengaluru..." -o assets/typing_about_2.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=18&center=true&vCenter=true&width=1000&lines=%F0%9F%A7%A9+Exploring+Machine+Learning+and+OpenCV..." -o assets/typing_about_3.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=18&center=true&vCenter=true&width=1000&lines=%E2%9A%A1+Dreaming+in+Algorithms,+Debugging+in+Style..." -o assets/typing_about_4.svg
-
-      - name: Fetch Stats, Trophies, and Badges
-        run: |
-          curl -L "https://github-readme-stats-alpha.vercel.app/api?username=Sahitya0805&show_icons=true&theme=tokyonight&hide=prs,issues" -o assets/github_stats_specs.svg
-          curl -L "https://github-readme-stats-alpha.vercel.app/api/top-langs/?username=Sahitya0805&layout=compact&theme=tokyonight" -o assets/top_langs_specs.svg
-          curl -L "https://github-profile-trophy-nu.vercel.app/?username=Sahitya0805&theme=radical" -o assets/trophies.svg
-          curl -L "https://img.shields.io/badge/Achievement-Pull_Shark-blue?style=for-the-badge&logo=github" -o assets/badge_pull_shark.svg
-          curl -L "https://img.shields.io/badge/Badge-Layer5_First_Design-orange?style=for-the-badge" -o assets/badge_layer5.svg
-          curl -L "https://img.shields.io/badge/Status-Active_Contributor-success?style=for-the-badge&logo=github" -o assets/badge_active.svg
-
-      - name: Fetch Question of the Day
-        run: |
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=00CCFF&size=18&center=true&vCenter=true&width=1000&lines=%F0%9F%A4%94+Why+don't+programmers+like+nature%3F" -o assets/qotd_question.svg
-          curl -L "https://readme-typing-svg.demolab.com?font=Digital-7+Mono&color=32CD32&size=18&center=true&vCenter=true&width=1000&lines=%F0%9F%92%A1+Answer:+It+has+too+many+bugs!" -o assets/qotd_answer.svg
-
-      - name: Commit and Push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/
-          git commit -m "Update static assets from external sources" || echo "No changes to commit"
-          git push
