@@ -92,6 +92,13 @@
 
   <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=3" width="1200" /></p>
 
+## 📈 GitHub Contribution Graph
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sahitya0805&theme=react-dark&hide_border=true&area=true" alt="Contribution Graph" width="100%" />
+</p>
+
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=3" width="1200" /></p>
+
 </div>
 
 ## 🏆 Trophies and Badges
