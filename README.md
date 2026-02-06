@@ -8,15 +8,15 @@
 <div align="center">
 
   <!-- Header: Reliable Typing SVGs (Served Locally) -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_world.svg?v=8" width="100%" />
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg?v=8" width="100%" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_world.svg?v=9" width="100%" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg?v=9" width="100%" />
   
   <p align="center">
     <img src="https://komarev.com/ghpvc/?username=Sahitya0805&color=1E90FF&style=for-the-badge" />
     <img src="https://img.shields.io/github/followers/Sahitya0805?label=Followers&style=for-the-badge&color=FFDA03" />
     <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=32CD32&label=Stars" />
   </p>
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=8" width="1200" /></p>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
 
 </div>
 
@@ -24,15 +24,15 @@
 ## 🧠 About Me
 <div align="center">
   <p align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_1.svg?v=8" width="1200" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_2.svg?v=8" width="1200" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_3.svg?v=8" width="1200" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_4.svg?v=8" width="1200" />
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_1.svg?v=9" width="1200" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_2.svg?v=9" width="1200" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_3.svg?v=9" width="1200" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_4.svg?v=9" width="1200" />
   </p>
   
 </div>
 
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=8" width="1200" /></p>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
 
 <!-- Tech Arsenal -->
 ## 🛠️ Tech Arsenal
@@ -55,7 +55,7 @@
 
 </div>
 
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=8" width="1200" /></p>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
 
 <!-- GitHub Stats Section -->
 ## 📊 GitHub Stats
@@ -63,67 +63,67 @@
  
  <!-- Profile Details (Valid) -->
  <p align="center">
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/profile_details.svg?v=8" height="160" alt="Profile Details" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/profile_details.svg?v=9" height="160" alt="Profile Details" />
  </p>
 
  <!-- Languages & Commits (Valid) -->
  <div style="display: flex; justify-content: center; margin-top: 10px;">
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/repos_per_language.svg?v=8" width="400" alt="Repos per Language" />
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/most_commit_language.svg?v=8" width="400" alt="Most Commit Language" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/repos_per_language.svg?v=9" width="400" alt="Repos per Language" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/most_commit_language.svg?v=9" width="400" alt="Most Commit Language" />
  </div>
  
  <br>
  
  <!-- Productive Time (Valid) -->
  <p align="center">
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/productive_time.svg?v=8" width="400" alt="Productive Time" />
+   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/productive_time.svg?v=9" width="400" alt="Productive Time" />
  </p>
 
  <!-- Note: Removed Broken Vercel Cards (Github Stats, Top Langs) -->
 
 </div>
 
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=8" width="1200" /></p>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
 
 ## 🐍 Watch the Snake Eat My Contributions!
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/github-contribution-grid-snake-dark.svg?v=8" alt="snake animation" width="100%" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/github-contribution-grid-snake-dark.svg?v=9" alt="snake animation" width="100%" />
 </p>
 
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=8" width="1200" /></p>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
 
 ## 📈 GitHub Contribution Graph
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sahitya0805&theme=react-dark&hide_border=true&area=true" alt="Contribution Graph" width="100%" />
 </p>
 
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=8" width="1200" /></p>
+  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
 
 </div>
 
 ## 🏆 Trophies and Badges
 <div align="center">
   <p align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg?v=8" width="100%" alt="Trophies" />
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg?v=9" width="100%" alt="Trophies" />
   </p>
    <p align="center">
     <img src="https://img.shields.io/badge/Achievement-Pull%20Shark-007ec6?style=for-the-badge&logo=github" /> 🦈<br><br>
     <a href="https://cloud.layer5.io/user/55ff6b45-c08f-4ede-9cb3-27cc86a92616?tab=badges&badge=first-design" alt="First Design" ><img width="175px" height="252px" src="https://badges.layer5.io/assets/badges/first-design/first-design.png" alt="First Design" /></a><br />
-    <sup><a href="https://badges.layer5.io">Layer5 badge</a></sup>
+    <sup><a href="https://badges.layer5.io">LAYER5 Badge</a></sup>
   </p>
 </div>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=8" width="1200" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
 
 ## 🤔 Question of the Day
 <div align="center">
   <p align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_question.svg?v=8" width="1200" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_answer.svg?v=8" width="1200" />
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_question.svg?v=9" width="1200" /><br>
+    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_answer.svg?v=9" width="1200" />
   </p>
 </div>
 
-<p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=8" width="1200" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
 
 ## 🌐 Connect With Me
 <p align="center">
