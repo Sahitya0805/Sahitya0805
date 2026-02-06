@@ -106,13 +106,11 @@
   <p align="center">
     <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg" width="100%" alt="Trophies" />
   </p>
-  <table align="center">
-    <tr>
-      <td align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/badge_pull_shark.svg?v=2" alt="Pull Shark" width="200" /></td>
-      <td align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/badge_layer5.svg?v=2" alt="Layer5" width="240" /></td>
-      <td align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/badge_active.svg?v=2" alt="Active" width="200" /></td>
-    </tr>
-  </table>
+   <p align="center">
+    <img src="https://img.shields.io/badge/Achievement-Pull%20Shark-007ec6?style=for-the-badge&logo=github" />
+    <img src="https://img.shields.io/badge/Badge-First%20Contribution-orange?style=for-the-badge&logo=github" />
+    <img src="https://img.shields.io/badge/Status-Active%20Contributor-brightgreen?style=for-the-badge&logo=github" />
+  </p>
 </div>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=3" width="1200" /></p>
