@@ -472,7 +472,7 @@ TOPIC_NAMES = {"fastapi": "FastAPI", "web3": "Web3", "solidity": "Solidity", "fa
                "pandas": "Pandas", "tensorflow": "TensorFlow", "pytorch": "PyTorch", "scikit-learn": "scikit-learn",
                "hacktoberfest": "Hacktoberfest", "github-actions": "GitHub Actions", "docker": "Docker",
                "api": "APIs", "rest-api": "REST APIs", "firebase": "Firebase", "vite": "Vite", "ai": "AI", "llm": "LLMs"}
-SKIP_TOPICS = {"website", "cricket", "report", "documentation", "event-planning", "social-impact", "hackathon"}
+SKIP_TOPICS = {"smart-india-hackathon", "sih2026", "hacktoberfest", "mlh", "static-site", "website", "cricket", "report", "documentation", "event-planning", "social-impact", "hackathon"}
 SKIP_LANGS = {"Rich Text Format", "Procfile", "Batchfile", "Makefile", "Dockerfile", "Shell", "PowerShell"}
 
 
