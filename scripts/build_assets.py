@@ -462,7 +462,9 @@ def journey():
 
 
 # ------------------------------------------------------------ current stack from recent repos
-TOPIC_NAMES = {"javascript": "JavaScript", "typescript": "TypeScript", "nodejs": "Node.js", "node": "Node.js",
+TOPIC_NAMES = {"fastapi": "FastAPI", "web3": "Web3", "solidity": "Solidity", "face-recognition": "Face Recognition",
+               "leaflet": "Leaflet", "static-site": "Static Sites", "smart-india-hackathon": "Smart India Hackathon",
+               "mlh": "MLH", "html": "HTML", "css": "CSS", "vercel": "Vercel", "javascript": "JavaScript", "typescript": "TypeScript", "nodejs": "Node.js", "node": "Node.js",
                "reactjs": "React", "react": "React", "nextjs": "Next.js", "vuejs": "Vue", "tailwindcss": "Tailwind CSS",
                "opencv": "OpenCV", "machine-learning": "Machine Learning", "deep-learning": "Deep Learning",
                "computer-vision": "Computer Vision", "python3": "Python", "html5": "HTML5", "css3": "CSS3",
@@ -470,6 +472,7 @@ TOPIC_NAMES = {"javascript": "JavaScript", "typescript": "TypeScript", "nodejs":
                "pandas": "Pandas", "tensorflow": "TensorFlow", "pytorch": "PyTorch", "scikit-learn": "scikit-learn",
                "hacktoberfest": "Hacktoberfest", "github-actions": "GitHub Actions", "docker": "Docker",
                "api": "APIs", "rest-api": "REST APIs", "firebase": "Firebase", "vite": "Vite", "ai": "AI", "llm": "LLMs"}
+SKIP_TOPICS = {"website", "cricket", "report", "documentation", "event-planning", "social-impact", "hackathon"}
 SKIP_LANGS = {"Rich Text Format", "Procfile", "Batchfile", "Makefile", "Dockerfile", "Shell", "PowerShell"}
 
 
@@ -492,6 +495,8 @@ def stack_from_repos(repos):
             cur[0] += share * weight
         for t in (r.get("repositoryTopics") or {}).get("nodes", []):
             slug = t["topic"]["name"]
+            if slug in SKIP_TOPICS:
+                continue
             name = TOPIC_NAMES.get(slug, slug.replace("-", " ").title())
             topics[name] = topics.get(name, 0) + weight
     row1 = [(n, c) for n, (_, c) in sorted(langs.items(), key=lambda kv: -kv[1][0])][:8]
@@ -506,6 +511,22 @@ def stack_from_repos(repos):
         if n not in {x for x, _ in row2}:
             row2.append((n, c))
     return (row1 or None), row2
+
+
+
+def apply_info(r):
+    """Fill a repo's missing description/topics from scripts/project_info.json."""
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "project_info.json")
+    try:
+        info = json.load(open(path, encoding="utf-8")).get(r["name"], {})
+    except (OSError, ValueError):
+        info = {}
+    if not r.get("description") and info.get("description"):
+        r["description"] = info["description"]
+    nodes = (r.get("repositoryTopics") or {}).get("nodes") or []
+    if not nodes and info.get("topics"):
+        r["repositoryTopics"] = {"nodes": [{"topic": {"name": t}} for t in info["topics"]]}
+    return r
 
 
 def ago(iso):
@@ -553,7 +574,7 @@ def fetch_stats(token):
             langs.setdefault(n, [0, e["node"]["color"] or GREY])
             langs[n][0] += e["size"]
     # latest projects = my own repos, most recently pushed first (skip this profile repo)
-    recent = [r for r in u["repositories"]["nodes"] if r["name"].lower() != USER.lower()]
+    recent = [apply_info(r) for r in u["repositories"]["nodes"] if r["name"].lower() != USER.lower()]
     projects = recent[:6]
     current_stack = stack_from_repos(recent[:10])
     start = dt.datetime.fromisoformat(u["createdAt"].replace("Z", "+00:00")).date()

@@ -1,0 +1,15 @@
+{
+  "_comment": "Fallback descriptions/topics used on the profile when a repo has none set on GitHub. GitHub's own description/topics always win.",
+  "CAYMAN": {"description": "Official website for Cayman Super Kings, Grand Cayman's cricket club — fixtures, squad, news, gallery and youth pathways. Zero-build HTML, CSS & ES modules.",
+             "topics": ["website", "cricket", "html", "css", "javascript", "static-site", "vercel"]},
+  "CSK": {"description": "Cayman Super Kings cricket club site — matches, scorecards, squad roster, news and gallery driven by JSON content files.",
+          "topics": ["website", "cricket", "html", "css", "javascript", "static-site"]},
+  "HUNAR": {"description": "HUNAR (हुनर) — voice-driven rural skill certification & livelihood mapping portal for artisans. Smart India Hackathon 2026.",
+            "topics": ["smart-india-hackathon", "javascript", "python", "tailwindcss", "leaflet", "social-impact"]},
+  "Hunar-Report": {"description": "Executive whitepaper & architecture dossier for Project HUNAR — PDF, Word and interactive web versions of the SIH 2026 report.",
+                   "topics": ["smart-india-hackathon", "report", "documentation", "html"]},
+  "Hacktoberfest": {"description": "Hacktoberfest 2026 hackathon plan by DevForge at Newton School of Technology — 13.5-hour overnight run-of-show, budget and logistics.",
+                    "topics": ["hacktoberfest", "hackathon", "event-planning", "mlh"]},
+  "HHG-3": {"description": "FaceTrace — detects a face, finds where it appears online via reverse-image search, and records a tamper-evident fingerprint on an EVM blockchain.",
+            "topics": ["python", "fastapi", "opencv", "face-recognition", "computer-vision", "blockchain", "web3", "solidity", "react"]}
+}
