@@ -297,6 +297,8 @@ def hero():
   {glow_blob(330, 260, 110, MINT, 0.10, -70, 15)}
   {glow_blob(700, 90, 110, CORAL, 0.08, -50, 20)}
   {globe(640, 178, 118)}
+  {orbit_tags(640, 178, 118)}
+  {meteors()}
 </g>
 <text x="36" y="42" font-family="{MONO}" font-size="11" letter-spacing="1" fill="{DARK}">{USER.lower()} / README.md</text>
 <g font-family="{MONO}" font-size="11" letter-spacing="1.5">
@@ -316,6 +318,197 @@ def hero():
   <text x="350" y="347" fill="{DARK}">UTC+05:30</text>
   <text x="{W-36}" y="347" text-anchor="end" fill="{DARK}">scroll ↓</text>
 </g>
+</svg>"""
+
+
+# ============================================================ BOOT sequence (top of page)
+BOOT_LINES = [("OK", MINT, "mounting /dev/curiosity"),
+              ("OK", MINT, "loading modules: python · javascript · typescript"),
+              ("OK", SKY, "calibrating opencv lenses"),
+              ("OK", VIOLET, "training neural pathways … epoch 1/∞"),
+              ("WARN", AMBER, "coffee levels low — continuing anyway"),
+              ("OK", MINT, "handshake with github.com/sahitya0805")]
+
+
+def boot():
+    H = 236
+    T = 13.0
+    y0, lh = 74, 21
+    out = ""
+    for i, (tag, col, msg) in enumerate(BOOT_LINES):
+        t0 = 0.4 + i * 0.55
+        full = f"[{tag:^4}] {msg}"
+        w = len(full) * 12.5 * 0.6 + 6
+        k = f"0;{t0/T:.4f};{(t0+0.35)/T:.4f};{(T-0.6)/T:.4f};{(T-0.5)/T:.4f};1"
+        out += (f'<clipPath id="b{i}"><rect x="36" y="{y0+i*lh-15}" height="20" width="0">'
+                f'<animate attributeName="width" values="0;0;{w:.0f};{w:.0f};0;0" keyTimes="{k}" dur="{T}s" repeatCount="indefinite"/></rect></clipPath>'
+                f'<text clip-path="url(#b{i})" x="36" y="{y0+i*lh}" font-family="{MONO}" font-size="12.5" xml:space="preserve">'
+                f'<tspan fill="{DARK}">[</tspan><tspan fill="{col}" font-weight="700">{tag:^4}</tspan><tspan fill="{DARK}">]</tspan>'
+                f'<tspan fill="#cfcfcf"> {esc(msg)}</tspan></text>')
+    pb_t0 = 0.4 + len(BOOT_LINES) * 0.55 + 0.2
+    pb_t1 = pb_t0 + 1.6
+    bx, by, bw = 36, 208, 420
+    stops = "".join(f'<stop offset="{i/(len(SPECTRUM)-1):.2f}" stop-color="{c}"/>' for i, c in enumerate(SPECTRUM))
+    kt = f"0;{pb_t0/T:.4f};{pb_t1/T:.4f};{(T-0.5)/T:.4f};1"
+    seg = "".join(f'<rect x="{bx + i*(bw/24):.1f}" y="{by-8}" width="{bw/24-3:.1f}" height="10" rx="2" fill="#161616"/>' for i in range(24))
+    granted = pb_t1 + 0.2
+    gk = f"0;{granted/T:.4f};{(granted+0.05)/T:.4f};{(T-0.5)/T:.4f};{(T-0.45)/T:.4f};1"
+    # radar on the right
+    rx, ry, rr = 690, 122, 64
+    rings = "".join(f'<circle cx="{rx}" cy="{ry}" r="{rr*k/3:.0f}" fill="none" stroke="{MINT}" stroke-opacity="0.18"/>' for k in (1, 2, 3))
+    rnd = random.Random(42)
+    blips = ""
+    for j in range(7):
+        ang = rnd.uniform(0, 2 * math.pi)
+        dist = rnd.uniform(0.25, 0.92) * rr
+        bxp, byp = rx + dist * math.cos(ang), ry + dist * math.sin(ang)
+        frac = ((math.degrees(ang) + 90) % 360) / 360
+        col = SPECTRUM[j % len(SPECTRUM)]
+        blips += (f'<circle cx="{bxp:.1f}" cy="{byp:.1f}" r="3" fill="{col}" opacity="0">'
+                  f'<animate attributeName="opacity" values="0;0;1;0.15;0" keyTimes="0;{max(0,frac-0.001):.3f};{frac:.3f};{min(1,frac+0.35):.3f};1" dur="4s" repeatCount="indefinite"/></circle>')
+    return f"""{svg_open(W, H, "Boot sequence: loading curiosity, python, javascript, opencv… access granted")}
+{defs_common(W, H, MINT, VIOLET)}
+<defs>
+  <linearGradient id="pb" x1="0" x2="1">{stops}</linearGradient>
+  <clipPath id="pbc"><rect x="{bx}" y="{by-8}" height="10" width="0"><animate attributeName="width" values="0;0;{bw};{bw};0" keyTimes="{kt}" dur="{T}s" repeatCount="indefinite"/></rect></clipPath>
+  <radialGradient id="sweep" cx="0" cy="0" r="1"><stop offset="0" stop-color="{MINT}" stop-opacity="0.45"/><stop offset="1" stop-color="{MINT}" stop-opacity="0"/></radialGradient>
+  <clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath>
+  <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#fff" opacity="0.03"/></pattern>
+</defs>
+{card(W, H, beam_dur=8)}
+<g clip-path="url(#clip)"><rect width="{W}" height="{H}" fill="url(#scan)"/>{glow_blob(700, 130, 90, MINT, 0.08, -30, 10)}</g>
+<circle cx="30" cy="26" r="5" fill="#ff5f57"/><circle cx="48" cy="26" r="5" fill="#febc2e"/><circle cx="66" cy="26" r="5" fill="#28c840"/>
+<text x="{W/2}" y="30" text-anchor="middle" font-family="{MONO}" font-size="11" fill="{DARK}">sahitya@nst — boot.sh</text>
+<line x1="0" x2="{W}" y1="46" y2="46" stroke="{HAIR}"/>
+{out}
+{seg}
+<g clip-path="url(#pbc)"><rect x="{bx}" y="{by-8}" width="{bw}" height="10" fill="url(#pb)"/></g>
+<rect x="{bx}" y="{by-8}" width="{bw}" height="10" fill="none"/>
+<text x="{bx+bw+14}" y="{by+1}" font-family="{MONO}" font-size="11.5" font-weight="700" fill="{MINT}" opacity="0">ACCESS GRANTED ▸ welcome, visitor
+  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="{gk}" dur="{T}s" repeatCount="indefinite"/>
+  <animate attributeName="fill" values="{MINT};{SKY};{VIOLET};{PINK};{AMBER};{MINT}" dur="1.2s" repeatCount="indefinite"/></text>
+{rings}
+<line x1="{rx-rr}" x2="{rx+rr}" y1="{ry}" y2="{ry}" stroke="{MINT}" stroke-opacity="0.12"/>
+<line x1="{rx}" x2="{rx}" y1="{ry-rr}" y2="{ry+rr}" stroke="{MINT}" stroke-opacity="0.12"/>
+<g><path d="M{rx},{ry} L{rx},{ry-rr} A{rr},{rr} 0 0,1 {rx+rr*math.sin(math.radians(40)):.1f},{ry-rr*math.cos(math.radians(40)):.1f} Z" fill="url(#sweep)"/>
+  <line x1="{rx}" y1="{ry}" x2="{rx}" y2="{ry-rr}" stroke="{MINT}" stroke-width="1.5"/>
+  <animateTransform attributeName="transform" type="rotate" values="0 {rx} {ry};360 {rx} {ry}" dur="4s" repeatCount="indefinite"/></g>
+{blips}
+<circle cx="{rx}" cy="{ry}" r="3" fill="{MINT}"/>
+<text x="{rx}" y="{ry-rr-8}" text-anchor="middle" font-family="{MONO}" font-size="9.5" letter-spacing="2" fill="{DARK}">SCANNING FOR IDEAS</text>
+</svg>"""
+
+
+# ============================================================ hero extras
+def meteors():
+    out = ""
+    for i, (x, y, d, b, c) in enumerate([(120, -20, 1.4, 0.5, WHITE), (420, -30, 1.2, 3.1, SKY), (300, -10, 1.6, 6.3, VIOLET), (560, -25, 1.3, 8.8, PINK)]):
+        T = 10
+        out += (f'<g opacity="0"><line x1="0" y1="0" x2="-70" y2="-34" stroke="url(#met{i})" stroke-width="1.6" stroke-linecap="round"/>'
+                f'<circle r="1.8" fill="#fff"/>'
+                f'<animateTransform attributeName="transform" type="translate" values="{x} {y};{x} {y};{x+260} {y+126};{x+260} {y+126}" '
+                f'keyTimes="0;{b/T:.3f};{(b+d)/T:.3f};1" dur="{T}s" repeatCount="indefinite"/>'
+                f'<animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;{b/T:.3f};{(b+0.2)/T:.3f};{(b+d)/T:.3f};1" dur="{T}s" repeatCount="indefinite"/></g>'
+                f'<defs><linearGradient id="met{i}" x1="0" x2="1"><stop offset="0" stop-color="{c}"/><stop offset="1" stop-color="{c}" stop-opacity="0"/></linearGradient></defs>')
+    return out
+
+
+def orbit_tags(cx, cy, R):
+    rx, ry = R * 1.42, R * 0.36
+    path = f"M{cx - rx:.1f},{cy} a{rx:.1f},{ry:.1f} 0 1,0 {2*rx:.1f},0 a{rx:.1f},{ry:.1f} 0 1,0 -{2*rx:.1f},0"
+    out = f'<g transform="rotate(-14 {cx} {cy})">'
+    for i, (t, c) in enumerate([("PY", SKY), ("JS", AMBER), ("TS", VIOLET), ("CV", MINT), ("ML", PINK)]):
+        out += (f'<g><rect x="-15" y="-10" width="30" height="20" rx="10" fill="{CARD}" stroke="{c}" stroke-opacity="0.7"/>'
+                f'<text y="4" text-anchor="middle" font-family="{MONO}" font-size="10" font-weight="700" fill="{c}">{t}</text>'
+                f'<animateMotion dur="22s" begin="-{i*22/5:.1f}s" repeatCount="indefinite" path="{path}"/></g>')
+    return out + "</g>"
+
+
+# ============================================================ neural net (middle)
+def neural():
+    H = 330
+    layers = [["curiosity", "coffee", "code", "late nights"], [None] * 6, [None] * 6, ["projects", "bug fixes", "new skills"]]
+    xs = [150, 330, 500, 680]
+    nodes = []
+    for li, layer in enumerate(layers):
+        n = len(layer)
+        gap = 200 / max(1, n - 1) if n > 1 else 0
+        top = 168 - (n - 1) * gap / 2
+        nodes.append([(xs[li], top + j * gap) for j in range(n)])
+    edges, pulses = "", ""
+    rnd = random.Random(7)
+    k = 0
+    for li in range(len(nodes) - 1):
+        for a in nodes[li]:
+            for b in nodes[li + 1]:
+                edges += f'<line x1="{a[0]}" y1="{a[1]:.1f}" x2="{b[0]}" y2="{b[1]:.1f}" stroke="#ffffff" stroke-opacity="0.06"/>'
+    # pulses travel full forward paths input -> output
+    for p in range(14):
+        path = [rnd.choice(nodes[li]) for li in range(len(nodes))]
+        col = SPECTRUM[p % len(SPECTRUM)]
+        d = "M" + " L".join(f"{x},{y:.1f}" for x, y in path)
+        dur = 3.2
+        beg = p * 0.45
+        pulses += (f'<path d="{d}" fill="none" stroke="{col}" stroke-opacity="0" stroke-width="1.2">'
+                   f'<animate attributeName="stroke-opacity" values="0;0.5;0" dur="{dur}s" begin="{beg:.2f}s" repeatCount="indefinite"/></path>'
+                   f'<circle r="3.2" fill="{col}" filter="url(#glowN)"><animateMotion dur="{dur}s" begin="{beg:.2f}s" repeatCount="indefinite" path="{d}"/>'
+                   f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="{dur}s" begin="{beg:.2f}s" repeatCount="indefinite"/></circle>')
+    ns = ""
+    for li, layer in enumerate(nodes):
+        for j, (x, y) in enumerate(layer):
+            col = spectrum(li / 3)
+            r = 9 if li in (0, 3) else 7
+            ns += (f'<circle cx="{x}" cy="{y:.1f}" r="{r}" fill="{CARD}" stroke="{col}" stroke-width="1.5"/>'
+                   f'<circle cx="{x}" cy="{y:.1f}" r="{r-4}" fill="{col}">'
+                   f'<animate attributeName="opacity" values="0.25;1;0.25" dur="{1.6 + rnd.random()*1.6:.1f}s" begin="{rnd.random()*2:.1f}s" repeatCount="indefinite"/></circle>')
+            lab = layers[li][j]
+            if lab and li == 0:
+                ns += f'<text x="{x-20}" y="{y+4:.1f}" text-anchor="end" font-family="{MONO}" font-size="12" fill="{WHITE}">{lab}</text>'
+            elif lab:
+                ns += f'<text x="{x+20}" y="{y+4:.1f}" font-family="{MONO}" font-size="12" fill="{WHITE}">{lab}</text>'
+    tags = "".join(f'<text x="{x}" y="{H-20}" text-anchor="middle" font-family="{MONO}" font-size="10" letter-spacing="1.5" fill="{DARK}">{t}</text>'
+                   for x, t in zip(xs, ["INPUT", "HIDDEN · 6", "HIDDEN · 6", "OUTPUT"]))
+    return f"""{svg_open(W, H, "A playful neural network: curiosity, coffee, code and late nights in; projects, bug fixes and new skills out")}
+{defs_common(W, H, VIOLET, PINK)}
+<defs><filter id="glowN" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath></defs>
+{card(W, H, beam_dur=10)}
+<g clip-path="url(#clip)">{glow_blob(420, 170, 150, VIOLET, 0.08, 40, 14)}</g>
+{head("~/brain.forward()", VIOLET, "loss: decreasing · accuracy: vibes")}
+{edges}
+{pulses}
+{ns}
+{tags}
+</svg>"""
+
+
+# ============================================================ DNA helix divider
+def helix():
+    H = 96
+    n, frames, dur = 46, 24, 6
+    cy, amp = H / 2, 26
+    x0, x1 = 30, W - 30
+    out = ""
+    for i in range(n):
+        x = x0 + (x1 - x0) * i / (n - 1)
+        col = spectrum(i / (n - 1))
+        ph = i * 0.42
+        ya, yb, oa, ob = [], [], [], []
+        for f in range(frames + 1):
+            t = 2 * math.pi * f / frames + ph
+            ya.append(f"{cy + amp*math.sin(t):.1f}")
+            yb.append(f"{cy - amp*math.sin(t):.1f}")
+            oa.append(f"{0.35 + 0.65*(math.cos(t)+1)/2:.2f}")
+            ob.append(f"{0.35 + 0.65*(1-math.cos(t))/2:.2f}")
+        A = f'dur="{dur}s" repeatCount="indefinite"'
+        out += (f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{ya[0]}" y2="{yb[0]}" stroke="{col}" stroke-opacity="0.18">'
+                f'<animate attributeName="y1" values="{";".join(ya)}" {A}/><animate attributeName="y2" values="{";".join(yb)}" {A}/></line>'
+                f'<circle cx="{x:.1f}" cy="{ya[0]}" r="3.2" fill="{col}"><animate attributeName="cy" values="{";".join(ya)}" {A}/>'
+                f'<animate attributeName="opacity" values="{";".join(oa)}" {A}/></circle>'
+                f'<circle cx="{x:.1f}" cy="{yb[0]}" r="3.2" fill="{col}"><animate attributeName="cy" values="{";".join(yb)}" {A}/>'
+                f'<animate attributeName="opacity" values="{";".join(ob)}" {A}/></circle>')
+    return f"""{svg_open(W, H, "divider")}
+{out}
 </svg>"""
 
 
@@ -984,17 +1177,22 @@ def placeholder(name, title, H=200, w=W):
 # ============================================================ build
 LABELS = [("about", "01", "About", "who i am", MINT), ("now", "02", "Now", "what i'm up to", AMBER),
           ("stack", "03", "Stack", "from my latest repos", SKY), ("projects", "04", "Projects", "latest first", VIOLET),
-          ("stats", "05", "Stats", "synced daily", SKY), ("rhythm", "06", "Rhythm", "when i ship", PINK),
-          ("journey", "07", "Journey", "so far", VIOLET), ("snake", "08", "Snake", "eats my commits", MINT),
-          ("ach", "09", "Achievements", "earned", AMBER), ("qotd", "10", "Fortune", "daily-ish", CORAL),
-          ("connect", "11", "Connect", "say hi", SKY)]
+          ("brain", "05", "Brain", "how i work", PINK),
+          ("stats", "06", "Stats", "synced daily", SKY), ("rhythm", "07", "Rhythm", "when i ship", PINK),
+          ("journey", "08", "Journey", "so far", VIOLET), ("snake", "09", "Snake", "eats my commits", MINT),
+          ("ach", "10", "Achievements", "earned", AMBER), ("qotd", "11", "Fortune", "daily-ish", CORAL),
+          ("connect", "12", "Connect", "say hi", SKY)]
 
 
 def build_static():
+    write("boot.svg", boot())
     write("hero.svg", hero())
+    write("neural.svg", neural())
+    write("helix.svg", helix())
     write("about.svg", about())
     write("now.svg", now_card())
-    write("stack.svg", stack())
+    if not os.path.exists(os.path.join(ASSETS, "stack.svg")):  # live build replaces it with my real stack
+        write("stack.svg", stack())
     write("journey.svg", journey())
     write("qotd.svg", qotd())
     write("footer.svg", footer())
