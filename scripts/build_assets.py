@@ -781,6 +781,8 @@ def project_card(p, i):
                  f'<text x="44" y="136" font-family="{MONO}" font-size="11.5" fill="#bdbdbd">{esc(lang["name"])}</text>')
     mx = 44 + len(lang.get("name") or "") * 7.2 + 22 if lang.get("name") else 28
     if contributed:
+        room = int((405 - mx - 24) / 7.0) - len("↳ contributed to ")
+        owner = owner if len(owner) <= room else owner[:max(4, room - 1)] + "…"
         meta += (f'<text x="{mx:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{VIOLET}">↳ <tspan fill="#bdbdbd">contributed to {esc(owner)}</tspan></text>')
     else:
         meta += (f'<text x="{mx:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{AMBER}">★ <tspan fill="#bdbdbd">{p.get("stargazerCount", 0)}</tspan></text>'
