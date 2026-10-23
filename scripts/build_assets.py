@@ -63,11 +63,13 @@ ABOUT_ROWS = [("NAME", "Sahitya Singh", CORAL), ("ROLE", "Tech Explorer", MINT),
 
 
 
+PROJECTS = ["Gitential", "Farmtora", "Explorer", "CAYMAN", "HHG-3", "HUNAR"]
+
 FORTUNES = [
-    ("Why did the developer go broke?", "because he used up all his cache!", MINT),
-    ("How many programmers does it take to change a light bulb?", "none, that's a hardware problem.", SKY),
-    ("Why do Java developers wear glasses?", "because they don't C#.", AMBER),
-    ("What's a programmer's favourite place to hang out?", "foo bar.", PINK),
+    ("What's the object-oriented way to become wealthy?", "inheritance.", MINT),
+    ("Why did the function stop calling?", "it had too many arguments.", SKY),
+    ("Why was the JavaScript developer sad?", "he didn't Node how to Express himself.", AMBER),
+    ("What do you call 8 hobbits?", "a hobbyte.", PINK),
 ]
 
 STACK_1 = [("JavaScript", "#f1e05a"), ("Python", "#3572A5"), ("Java", "#b07219")]
@@ -658,6 +660,7 @@ REPO_FIELDS = "name description url stargazerCount forkCount isFork pushedAt own
 def fetch_stats(token):
     q = f"""query($u:String!){{user(login:$u){{createdAt
       followers{{totalCount}} pullRequests{{totalCount}}
+      repositoriesContributedTo(first:100,includeUserRepositories:false,contributionTypes:[COMMIT,PULL_REQUEST]){{nodes{{{REPO_FIELDS}}}}}
       pinnedItems(first:6,types:REPOSITORY){{nodes{{... on Repository{{{REPO_FIELDS}}}}}}}
       repositories(ownerAffiliations:OWNER,privacy:PUBLIC,first:100,isFork:false,orderBy:{{field:PUSHED_AT,direction:DESC}}){{totalCount
         nodes{{{REPO_FIELDS} repositoryTopics(first:10){{nodes{{topic{{name}}}}}} languages(first:10,orderBy:{{field:SIZE,direction:DESC}}){{edges{{size node{{name color}}}}}}}}}}}}}}"""
@@ -670,8 +673,14 @@ def fetch_stats(token):
             langs.setdefault(n, [0, e["node"]["color"] or GREY])
             langs[n][0] += e["size"]
     # latest projects = my own repos, most recently pushed first (skip this profile repo)
-    recent = [r for r in u["repositories"]["nodes"] if r["name"].lower() != USER.lower()]
-    projects = recent[:6]
+    pool = {}
+    for r in u["repositories"]["nodes"] + u["repositoriesContributedTo"]["nodes"] + u["pinnedItems"]["nodes"]:
+        if r and r.get("name"):
+            pool.setdefault(r["name"].lower(), r)
+    projects = [pool[n.lower()] for n in PROJECTS if n.lower() in pool]
+    missing = [n for n in PROJECTS if n.lower() not in pool]
+    if missing:
+        print("projects not found:", ", ".join(missing))
     start = dt.datetime.fromisoformat(u["createdAt"].replace("Z", "+00:00")).date()
     today = dt.datetime.now(dt.timezone.utc).date()
     cq = """query($u:String!,$f:DateTime,$t:DateTime){user(login:$u){contributionsCollection(from:$f,to:$t){
@@ -1059,12 +1068,12 @@ def achievement(title, sub, kind, color):
 
 # ============================================================ connect + footer
 def button(idx, name, color):
-    w, H = 405, 52
+    w, H = 250, 44
     return f"""{svg_open(w, H, name)}
 <rect x="0.5" y="0.5" width="{w-1}" height="{H-1}" rx="12" fill="{color}" fill-opacity="0.06" stroke="{color}" stroke-opacity="0.35"/>
-<text x="18" y="31" font-family="{MONO}" font-size="10" fill="{color}" opacity="0.7">{idx}</text>
-<text x="42" y="31.5" font-family="{MONO}" font-size="13" fill="{WHITE}">{esc(name)}</text>
-<text x="{w-18}" y="31.5" text-anchor="end" font-family="{MONO}" font-size="13" fill="{color}">↗</text>
+<text x="16" y="27" font-family="{MONO}" font-size="10" fill="{color}" opacity="0.7">{idx}</text>
+<text x="40" y="27.5" font-family="{MONO}" font-size="13" fill="{WHITE}">{esc(name)}</text>
+<text x="{w-16}" y="27.5" text-anchor="end" font-family="{MONO}" font-size="13" fill="{color}">↗</text>
 </svg>"""
 
 
@@ -1092,8 +1101,8 @@ def placeholder(name, title, H=200, w=W):
 
 # ============================================================ build
 LABELS = [("about", "01", "About", "who i am", MINT), ("stack", "02", "Tech Arsenal", "what i use", SKY),
-          ("projects", "03", "Projects", "latest first", VIOLET), ("stats", "04", "GitHub Stats", "synced daily", SKY),
-          ("rhythm", "05", "Rhythm", "when i commit", PINK), ("snake", "06", "Snake", "eats my contributions", MINT),
+          ("projects", "03", "Projects", "featured", VIOLET), ("stats", "04", "GitHub Stats", "synced daily", SKY),
+          ("rhythm", "05", "Rhythm", "when i commit", PINK), ("pacman", "06", "Pac-Man", "eats my contributions", AMBER),
           ("ach", "07", "Trophies & Badges", "earned", AMBER), ("qotd", "08", "Question of the Day", "", CORAL),
           ("connect", "09", "Connect", "", SKY)]
 

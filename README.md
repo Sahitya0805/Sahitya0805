@@ -43,11 +43,11 @@
 
 <img src="assets/helix.svg" width="100%" alt="" />
 
-<img src="assets/label_snake.svg" width="100%" alt="06 Snake" />
+<img src="assets/label_pacman.svg" width="100%" alt="06 Pac-Man" />
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/snake-spectrum.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/github-contribution-grid-snake.svg" />
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/snake-spectrum.svg" width="100%" alt="Snake eating my contribution graph" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/pacman-contribution-graph-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/pacman-contribution-graph.svg" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/pacman-contribution-graph-dark.svg" width="100%" alt="Pac-Man eating my contribution graph" />
 </picture>
 
 <br/><br/>
@@ -64,8 +64,8 @@
 <br/><br/>
 
 <img src="assets/label_connect.svg" width="100%" alt="09 Connect With Me" />
-<a href="https://www.linkedin.com/in/sahitya-singh-7012b137b"><img src="assets/btn_linkedin.svg" width="49%" alt="LinkedIn" /></a>
-<a href="https://www.instagram.com/sahit_ya8050"><img src="assets/btn_instagram.svg" width="49%" alt="Instagram" /></a>
+<a href="https://www.linkedin.com/in/sahitya-singh-7012b137b"><img src="assets/btn_linkedin.svg" width="30%" alt="LinkedIn" /></a>
+<a href="https://www.instagram.com/sahit_ya8050"><img src="assets/btn_instagram.svg" width="30%" alt="Instagram" /></a>
 
 <img src="assets/footer.svg" width="100%" alt="" />
 
