@@ -1015,13 +1015,17 @@ def project_card(p, i):
 </svg>"""
 
 
+def slug(name):
+    return re.sub(r'[^a-z0-9]+', '-', name.lower()).strip('-')
+
+
 def update_readme_projects(projects):
     if not os.path.exists(README):
         return
     s = open(README, encoding="utf-8").read()
     links = []
     for i, p in enumerate(projects, 1):
-        links.append(f'<a href="{esc(p["url"])}"><img src="assets/proj_{i}.svg" width="49%" alt="{esc(p["name"])}" /></a>')
+        links.append(f'<a href="{esc(p["url"])}"><img src="assets/proj_{slug(p['name'])}.svg" width="49%" alt="{esc(p["name"])}" /></a>')
     body = "\n".join(links)
     new = re.sub(r"(<!--PROJECTS:START-->)(.*?)(<!--PROJECTS:END-->)", lambda m: f"{m.group(1)}\n{body}\n{m.group(3)}", s, flags=re.S)
     if new != s:
@@ -1138,7 +1142,7 @@ def build_live(s):
     write("stats.svg", stats_card(s))
     write("rhythm.svg", rhythm_card(s))
     for i, p in enumerate(s["projects"], 1):
-        write(f"proj_{i}.svg", project_card(p, i - 1))
+        write(f"proj_{slug(p['name'])}.svg", project_card(p, i - 1))
     update_readme_projects(s["projects"])
 
 
