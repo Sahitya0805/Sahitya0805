@@ -64,12 +64,19 @@ ABOUT_ROWS = [("NAME", "Sahitya Singh", CORAL), ("ROLE", "Tech Explorer", MINT),
 
 
 PROJECTS = ["Gitential", "Farmtora", "Explorer", "CAYMAN", "HHG-3", "HUNAR"]
+# private repos the workflow token can't read: shown from these details instead
+MANUAL_PROJECTS = {
+    "gitential": {"name": "Gitential", "description": None, "url": "https://github.com/Sahitya0805/Gitential",
+                  "stargazerCount": 0, "forkCount": 0, "isFork": False, "pushedAt": "2026-02-22T00:00:00Z",
+                  "owner": {"login": "Sahitya0805"}, "primaryLanguage": {"name": "TypeScript", "color": "#3178c6"},
+                  "repositoryTopics": {"nodes": []}, "languages": {"edges": []}},
+}
 
 FORTUNES = [
     ("What's the object-oriented way to become wealthy?", "inheritance.", MINT),
     ("Why did the function stop calling?", "it had too many arguments.", SKY),
     ("Why was the JavaScript developer sad?", "he didn't Node how to Express himself.", AMBER),
-    ("What do you call 8 hobbits?", "a hobbyte.", PINK),
+    ("Why do programmers mix up Halloween and Christmas?", "because Oct 31 == Dec 25.", PINK),
 ]
 
 STACK_1 = [("JavaScript", "#f1e05a"), ("Python", "#3572A5"), ("Java", "#b07219")]
@@ -677,6 +684,10 @@ def fetch_stats(token):
     for r in u["repositories"]["nodes"] + u["repositoriesContributedTo"]["nodes"] + u["pinnedItems"]["nodes"]:
         if r and r.get("name"):
             pool.setdefault(r["name"].lower(), r)
+    projects = [pool[n.lower()] for n in PROJECTS if n.lower() in pool]
+    for n in PROJECTS:
+        if n.lower() not in pool and n.lower() in MANUAL_PROJECTS:
+            pool[n.lower()] = MANUAL_PROJECTS[n.lower()]
     projects = [pool[n.lower()] for n in PROJECTS if n.lower() in pool]
     missing = [n for n in PROJECTS if n.lower() not in pool]
     if missing:
