@@ -23,12 +23,11 @@
 
 <img src="assets/label_projects.svg" width="100%" alt="03 Projects" />
 <!--PROJECTS:START-->
-<a href="https://github.com/Sahitya0805/CAYMAN"><img src="assets/proj_1.svg" width="49%" alt="CAYMAN" /></a>
-<a href="https://github.com/Sahitya0805/Hunar-Report"><img src="assets/proj_2.svg" width="49%" alt="Hunar-Report" /></a>
-<a href="https://github.com/Sahitya0805/HUNAR"><img src="assets/proj_3.svg" width="49%" alt="HUNAR" /></a>
-<a href="https://github.com/Sahitya0805/Hacktoberfest"><img src="assets/proj_4.svg" width="49%" alt="Hacktoberfest" /></a>
-<a href="https://github.com/Sahitya0805/CSK"><img src="assets/proj_5.svg" width="49%" alt="CSK" /></a>
-<a href="https://github.com/Sahitya0805/HHG-3"><img src="assets/proj_6.svg" width="49%" alt="HHG-3" /></a>
+<a href="https://github.com/Sahitya0805/Farmtora"><img src="assets/proj_1.svg" width="49%" alt="Farmtora" /></a>
+<a href="https://github.com/Sahitya0805/Explorer"><img src="assets/proj_2.svg" width="49%" alt="Explorer" /></a>
+<a href="https://github.com/Sahitya0805/CAYMAN"><img src="assets/proj_3.svg" width="49%" alt="CAYMAN" /></a>
+<a href="https://github.com/Sahitya0805/HHG-3"><img src="assets/proj_4.svg" width="49%" alt="HHG-3" /></a>
+<a href="https://github.com/Sahitya0805/HUNAR"><img src="assets/proj_5.svg" width="49%" alt="HUNAR" /></a>
 <!--PROJECTS:END-->
 
 <img src="assets/helix.svg" width="100%" alt="" />
