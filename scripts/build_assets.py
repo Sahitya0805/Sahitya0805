@@ -49,38 +49,24 @@ SPECTRUM = [VIOLET, SKY, MINT, AMBER, CORAL]
 GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&*+=<>/?$"
 
 # =================================================================== CONTENT
-ROLES = [("building FaceTrace — vision meets blockchain", MINT), ("shipping HUNAR for Smart India Hackathon", SKY),
-         ("crafting the Cayman Super Kings website", VIOLET), ("running hackathons with DevForge", AMBER),
-         ("dreaming in algorithms", PINK)]
+ROLES = [("Tech Explorer", MINT), ("1st Year Student at NST Bengaluru", SKY),
+         ("Dreaming in Algorithms, Debugging in Style", VIOLET)]
 
-ABOUT_PARA = ["I'm Sahitya — a first-year student at Newton",
-              "School of Technology who builds for the web",
-              "and beyond: club websites, hackathon platforms",
-              "and FaceTrace, a pipeline that traces faces",
-              "and anchors its proofs on the blockchain."]
-ABOUT_ROWS = [("BASED IN", "Bengaluru, India", CORAL), ("STUDYING", "Newton School of Tech · Y1", SKY),
-              ("FOCUS", "Web · Computer Vision · Web3", MINT), ("WRITES", "TypeScript · Python · JavaScript", AMBER),
-              ("CURRENTLY", "Building FaceTrace", VIOLET), ("MOTTO", "Dream in algorithms", PINK)]
+ABOUT_PARA = ["Hi, I'm Sahitya Singh!",
+              "Tech Explorer.",
+              "1st Year Student at NST Bengaluru.",
+              "Dreaming in Algorithms,",
+              "Debugging in Style."]
+ABOUT_ROWS = [("NAME", "Sahitya Singh", CORAL), ("ROLE", "Tech Explorer", MINT),
+              ("STUDYING", "1st Year · NST Bengaluru", SKY), ("LANGUAGES", "JavaScript · Python · Java", AMBER),
+              ("FRONTEND", "HTML5 · CSS3", VIOLET), ("TOOLS", "Git", PINK)]
 
-NOW = [("NOW", MINT, ["First year at NST Bengaluru", "Building FaceTrace", "Organising with DevForge"]),
-       ("LEARNING", VIOLET, ["TypeScript & React", "Computer vision pipelines", "Solidity & smart contracts"]),
-       ("NEXT", AMBER, ["Take HUNAR beyond SIH", "More hackathon wins", "Bigger collaborations"])]
 
-JOURNEY = [("Hello, GitHub", "joined & first commits", VIOLET),
-           ("Started at NST", "Newton School of Tech, BLR", SKY),
-           ("First merged PR", "unlocked Pull Shark", MINT),
-           ("Layer5 badge", "First Design", AMBER),
-           ("SIH 2026", "Project HUNAR", CORAL),
-           ("What's next?", "FaceTrace v2", PINK)]
 
-FORTUNES = [("Why do programmers prefer dark mode?", "because light attracts bugs.", MINT),
-            ("How many programmers to change a light bulb?", "none — that's a hardware problem.", SKY),
-            ("Why did the developer go broke?", "they used up all their cache.", AMBER)]
+FORTUNES = [("Why do programmers prefer dark mode?", "because light attracts bugs!", MINT)]
 
-STACK_1 = [("JavaScript", "#f1e05a"), ("Python", "#3572A5"), ("Java", "#b07219"), ("HTML5", "#e34c26"),
-           ("CSS3", "#663399"), ("TypeScript", "#3178c6"), ("Solidity", "#AA6746")]
-STACK_2 = [("Git", "#f05032"), ("GitHub", WHITE), ("Linux", "#fcc624"), ("VS Code", "#23a8f2"),
-           ("Vercel", WHITE), ("Computer Vision", SKY), ("Tailwind CSS", PINK)]
+STACK_1 = [("JavaScript", "#f1e05a"), ("Python", "#3572A5"), ("Java", "#b07219")]
+STACK_2 = [("HTML5", "#e34c26"), ("CSS3", "#663399"), ("Git", "#f05032")]
 
 
 # =================================================================== helpers
@@ -288,7 +274,7 @@ def hero():
                      f'<animate attributeName="y" values="272;272;266;266;262;262" keyTimes="{kt}" dur="{RT}s" repeatCount="indefinite"/></text>')
     bar = "".join(f'<rect x="{36 + i*26}" y="166" width="22" height="3" rx="1.5" fill="{c}">{fade_in(1.0 + i*0.08)}</rect>'
                   for i, c in enumerate(SPECTRUM))
-    return f"""{svg_open(W, H, "Sahitya Singh — tech explorer and builder, Newton School of Technology, Bengaluru")}
+    return f"""{svg_open(W, H, "Hi, I'm Sahitya Singh — Tech Explorer, 1st Year Student at NST Bengaluru")}
 {defs_common(W, H, VIOLET, MINT)}
 <defs><clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath>
 <linearGradient id="beamV" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="{SKY}" stop-opacity="0"/><stop offset="0.85" stop-color="{SKY}" stop-opacity="0.06"/><stop offset="1" stop-color="#fff" stop-opacity="0.18"/></linearGradient>
@@ -309,21 +295,20 @@ def hero():
 </g>
 <text x="36" y="42" font-family="{MONO}" font-size="11" letter-spacing="1" fill="{DARK}">{USER.lower()} / README.md</text>
 <g font-family="{MONO}" font-size="11" letter-spacing="1.5">
-  <circle cx="{W-36-19*(11*0.6+1.5)-12:.0f}" cy="38" r="3.5" fill="{MINT}"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
-  <text x="{W-36}" y="42" text-anchor="end" fill="{GREY}">AVAILABLE TO COLLAB</text>
+  <circle cx="{W-36-27*(11*0.6+1.5)-12:.0f}" cy="38" r="3.5" fill="{MINT}"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
+  <text x="{W-36}" y="42" text-anchor="end" fill="{GREY}">WELCOME TO MY DIGITAL WORLD</text>
 </g>
 <g>{scramble(name, 36, 146, size, WHITE, T, adv=adv, seed=8, ls=ls, weight=600)}{jitter(5, 0.86)}</g>
 {rgb_split(name, 36, 146, size, adv, 5, 0.86)}
 {bar}
-<text x="36" y="200" font-family="{SANS}" font-size="16" fill="{GREY}"><tspan fill="{WHITE}">Tech explorer</tspan> &amp; <tspan fill="{WHITE}">builder of wild ideas.</tspan>{fade_in(0.9)}</text>
-<text x="36" y="224" font-family="{SANS}" font-size="16" fill="{GREY}">First-year at Newton School of Technology.{fade_in(1.1)}</text>
+<text x="36" y="200" font-family="{SANS}" font-size="16" fill="{GREY}"><tspan fill="{WHITE}">Tech Explorer.</tspan>{fade_in(0.9)}</text>
+<text x="36" y="224" font-family="{SANS}" font-size="16" fill="{GREY}">1st Year Student at NST Bengaluru.{fade_in(1.1)}</text>
 <text x="36" y="266" font-family="{MONO}" font-size="13" fill="{GREY}">currently →{fade_in(1.3)}</text>
 {role_svg}
 <line x1="36" x2="{W-36}" y1="318" y2="318" stroke="{HAIR}"/>
 <g font-family="{MONO}" font-size="11" letter-spacing="1">
-  <text x="36" y="347" fill="{CORAL}">●</text><text x="52" y="347" fill="{DARK}">12.97°N 77.59°E</text>
-  <text x="206" y="347" fill="{DARK}">BENGALURU, IN</text>
-  <text x="350" y="347" fill="{DARK}">UTC+05:30</text>
+  <text x="36" y="347" fill="{CORAL}">●</text><text x="52" y="347" fill="{DARK}">NST BENGALURU</text>
+  <text x="206" y="347" fill="{DARK}">1ST YEAR</text>
   <text x="{W-36}" y="347" text-anchor="end" fill="{DARK}">scroll ↓</text>
 </g>
 </svg>"""
@@ -428,12 +413,12 @@ def rgb_split(text, x0, y, size, adv, dur=5, at=0.86):
 
 
 # ============================================================ BOOT sequence (top of page)
-BOOT_LINES = [("OK", MINT, "mounting /dev/curiosity"),
-              ("OK", MINT, "loading modules: typescript · python · solidity"),
-              ("OK", SKY, "compiling facetrace vision pipeline"),
-              ("OK", VIOLET, "deploying cayman-super-kings → vercel"),
-              ("WARN", AMBER, "sleep schedule not found — ignoring"),
-              ("OK", MINT, "handshake with github.com/sahitya0805")]
+BOOT_LINES = [("OK", MINT, "user: sahitya singh"),
+              ("OK", SKY, "role: tech explorer"),
+              ("OK", VIOLET, "status: 1st year student @ NST Bengaluru"),
+              ("OK", AMBER, "languages: javascript · python · java"),
+              ("OK", PINK, "frontend: html5 · css3 · tools: git"),
+              ("OK", CORAL, "dreaming in algorithms, debugging in style")]
 
 
 def boot():
@@ -481,7 +466,7 @@ def boot():
                 f'<animate attributeName="height" values="{hs}" dur="{1.2 + (j % 4)*0.15:.2f}s" repeatCount="indefinite"/>'
                 f'<animate attributeName="y" values="{ys}" dur="{1.2 + (j % 4)*0.15:.2f}s" repeatCount="indefinite"/></rect>')
     cpu += f'<text x="{628+14*9+8}" y="214" font-family="{MONO}" font-size="9.5" letter-spacing="1.5" fill="{DARK}">CPU</text>'
-    return f"""{svg_open(W, H, "Boot sequence: mounting curiosity, compiling FaceTrace, deploying… access granted")}
+    return f"""{svg_open(W, H, "Boot sequence: Sahitya Singh, tech explorer, 1st year student at NST Bengaluru")}
 {defs_common(W, H, MINT, VIOLET)}
 <defs>
   <linearGradient id="pb" x1="0" x2="1">{stops}</linearGradient>
@@ -511,7 +496,7 @@ def boot():
   <animateTransform attributeName="transform" type="rotate" values="0 {rx} {ry};360 {rx} {ry}" dur="4s" repeatCount="indefinite"/></g>
 {blips}
 <circle cx="{rx}" cy="{ry}" r="3" fill="{MINT}"/>
-<text x="{rx}" y="{ry-rr-8}" text-anchor="middle" font-family="{MONO}" font-size="9.5" letter-spacing="2" fill="{DARK}">SCANNING FOR IDEAS</text>
+<text x="{rx}" y="{ry-rr-8}" text-anchor="middle" font-family="{MONO}" font-size="9.5" letter-spacing="2" fill="{DARK}">WELCOME TO MY DIGITAL WORLD</text>
 </svg>"""
 
 
@@ -533,69 +518,11 @@ def orbit_tags(cx, cy, R):
     rx, ry = R * 1.42, R * 0.36
     path = f"M{cx - rx:.1f},{cy} a{rx:.1f},{ry:.1f} 0 1,0 {2*rx:.1f},0 a{rx:.1f},{ry:.1f} 0 1,0 -{2*rx:.1f},0"
     out = f'<g transform="rotate(-14 {cx} {cy})">'
-    for i, (t, c) in enumerate([("PY", SKY), ("JS", AMBER), ("TS", VIOLET), ("CV", MINT), ("SOL", PINK)]):
-        out += (f'<g><rect x="-15" y="-10" width="30" height="20" rx="10" fill="{CARD}" stroke="{c}" stroke-opacity="0.7"/>'
+    for i, (t, c) in enumerate([("JS", AMBER), ("PY", SKY), ("JAVA", CORAL), ("HTML", PINK), ("CSS", VIOLET), ("GIT", MINT)]):
+        out += (f'<g><rect x="{-(len(t)*3.3+9):.1f}" y="-10" width="{len(t)*6.6+18:.1f}" height="20" rx="10" fill="{CARD}" stroke="{c}" stroke-opacity="0.7"/>'
                 f'<text y="4" text-anchor="middle" font-family="{MONO}" font-size="10" font-weight="700" fill="{c}">{t}</text>'
-                f'<animateMotion dur="22s" begin="-{i*22/5:.1f}s" repeatCount="indefinite" path="{path}"/></g>')
+                f'<animateMotion dur="22s" begin="-{i*22/6:.1f}s" repeatCount="indefinite" path="{path}"/></g>')
     return out + "</g>"
-
-
-# ============================================================ neural net (middle)
-def neural():
-    H = 330
-    layers = [["curiosity", "code", "hackathons", "late nights"], [None] * 6, [None] * 6, ["projects", "bug fixes", "new skills"]]
-    xs = [150, 330, 500, 680]
-    nodes = []
-    for li, layer in enumerate(layers):
-        n = len(layer)
-        gap = 200 / max(1, n - 1) if n > 1 else 0
-        top = 168 - (n - 1) * gap / 2
-        nodes.append([(xs[li], top + j * gap) for j in range(n)])
-    edges, pulses = "", ""
-    rnd = random.Random(7)
-    k = 0
-    for li in range(len(nodes) - 1):
-        for a in nodes[li]:
-            for b in nodes[li + 1]:
-                edges += f'<line x1="{a[0]}" y1="{a[1]:.1f}" x2="{b[0]}" y2="{b[1]:.1f}" stroke="#ffffff" stroke-opacity="0.06"/>'
-    # pulses travel full forward paths input -> output
-    for p in range(14):
-        path = [rnd.choice(nodes[li]) for li in range(len(nodes))]
-        col = SPECTRUM[p % len(SPECTRUM)]
-        d = "M" + " L".join(f"{x},{y:.1f}" for x, y in path)
-        dur = 3.2
-        beg = p * 0.45
-        pulses += (f'<path d="{d}" fill="none" stroke="{col}" stroke-opacity="0" stroke-width="1.2">'
-                   f'<animate attributeName="stroke-opacity" values="0;0.5;0" dur="{dur}s" begin="{beg:.2f}s" repeatCount="indefinite"/></path>'
-                   f'<circle r="3.2" fill="{col}" filter="url(#glowN)"><animateMotion dur="{dur}s" begin="{beg:.2f}s" repeatCount="indefinite" path="{d}"/>'
-                   f'<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.9;1" dur="{dur}s" begin="{beg:.2f}s" repeatCount="indefinite"/></circle>')
-    ns = ""
-    for li, layer in enumerate(nodes):
-        for j, (x, y) in enumerate(layer):
-            col = spectrum(li / 3)
-            r = 9 if li in (0, 3) else 7
-            ns += (f'<circle cx="{x}" cy="{y:.1f}" r="{r}" fill="{CARD}" stroke="{col}" stroke-width="1.5"/>'
-                   f'<circle cx="{x}" cy="{y:.1f}" r="{r-4}" fill="{col}">'
-                   f'<animate attributeName="opacity" values="0.25;1;0.25" dur="{1.6 + rnd.random()*1.6:.1f}s" begin="{rnd.random()*2:.1f}s" repeatCount="indefinite"/></circle>')
-            lab = layers[li][j]
-            if lab and li == 0:
-                ns += f'<text x="{x-20}" y="{y+4:.1f}" text-anchor="end" font-family="{MONO}" font-size="12" fill="{WHITE}">{lab}</text>'
-            elif lab:
-                ns += f'<text x="{x+20}" y="{y+4:.1f}" font-family="{MONO}" font-size="12" fill="{WHITE}">{lab}</text>'
-    tags = "".join(f'<text x="{x}" y="{H-20}" text-anchor="middle" font-family="{MONO}" font-size="10" letter-spacing="1.5" fill="{DARK}">{t}</text>'
-                   for x, t in zip(xs, ["INPUT", "HIDDEN · 6", "HIDDEN · 6", "OUTPUT"]))
-    return f"""{svg_open(W, H, "A playful neural network: curiosity, code, hackathons and late nights in; projects, bug fixes and new skills out")}
-{defs_common(W, H, VIOLET, PINK)}
-<defs><filter id="glowN" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-<clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath></defs>
-{card(W, H, beam_dur=10)}
-<g clip-path="url(#clip)">{glow_blob(420, 170, 150, VIOLET, 0.08, 40, 14)}</g>
-{head("~/brain.forward()", VIOLET, "loss: decreasing · accuracy: vibes")}
-{edges}
-{pulses}
-{ns}
-{tags}
-</svg>"""
 
 
 # ============================================================ DNA helix divider
@@ -659,7 +586,7 @@ def about():
               f'<text x="{rx+14}" y="{y+19}" font-family="{MONO}" font-size="10.5" letter-spacing="1.5" fill="{DARK}">{k}</text>'
               f'<text x="{rx+108}" y="{y+19}" font-family="{MONO}" font-size="12.5" fill="{WHITE}">{esc(v)}</text>'
               f'<line x1="{rx}" x2="{W-36}" y1="{y+32}" y2="{y+32}" stroke="{HAIR}"/></g>')
-    return f"""{svg_open(W, H, "About: first-year at Newton School of Technology, Bengaluru; web, computer vision and web3.")}
+    return f"""{svg_open(W, H, "About: Sahitya Singh, Tech Explorer, 1st Year Student at NST Bengaluru. Dreaming in Algorithms, Debugging in Style.")}
 {defs_common(W, H, MINT, SKY)}
 <defs><clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath></defs>
 {card(W, H, beam_dur=10)}
@@ -668,30 +595,6 @@ def about():
 <line x1="{rx-34}" x2="{rx-34}" y1="36" y2="{H-36}" stroke="{HAIR}"/>
 {p}
 {r}
-</svg>"""
-
-
-# ============================================================ now / learning / next
-def now_card():
-    H = 230
-    colw = (W - 72) / 3
-    out = ""
-    for i, (title, col, items) in enumerate(NOW):
-        x = 36 + i * colw
-        out += (f'<g>{fade_in(0.2 + i*0.15)}'
-                f'<rect x="{x:.0f}" y="66" width="{colw-16:.0f}" height="128" rx="12" fill="{col}" fill-opacity="0.05" stroke="{col}" stroke-opacity="0.25"/>'
-                f'<rect x="{x:.0f}" y="66" width="34" height="2" fill="{col}"/>'
-                f'<text x="{x+18:.0f}" y="96" font-family="{MONO}" font-size="11" font-weight="600" letter-spacing="2.5" fill="{col}">{title}</text>')
-        for j, it in enumerate(items):
-            yy = 126 + j * 24
-            out += (f'<text x="{x+18:.0f}" y="{yy}" font-family="{MONO}" font-size="12" fill="{col}">›</text>'
-                    f'<text x="{x+32:.0f}" y="{yy}" font-family="{SANS}" font-size="13.5" fill="{WHITE if j == 0 else "#bdbdbd"}">{esc(it)}</text>')
-        out += "</g>"
-    return f"""{svg_open(W, H, "Now, learning, next")}
-{defs_common(W, H, AMBER, VIOLET)}
-{card(W, H, beam_dur=9)}
-{head("~/now", AMBER, "updated as I go")}
-{out}
 </svg>"""
 
 
@@ -734,124 +637,6 @@ def stack(row1=None, row2=None, note="tools i reach for"):
 </svg>"""
 
 
-# ============================================================ journey timeline
-def journey():
-    H = 230
-    n = len(JOURNEY)
-    x0, x1 = 104, W - 104
-    y = 112
-    step = (x1 - x0) / (n - 1)
-    stops = "".join(f'<stop offset="{i/(n-1):.3f}" stop-color="{c}"/>' for i, (*_, c) in enumerate(JOURNEY))
-    out = ""
-    for i, (t, sub, c) in enumerate(JOURNEY):
-        x = x0 + i * step
-        d = 0.3 + i * 0.25
-        up = i % 2 == 0
-        ty = y - 34 if up else y + 50
-        out += (f'<g>{fade_in(d)}'
-                f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{y}" y2="{y-18 if up else y+18}" stroke="{c}" stroke-opacity="0.5"/>'
-                f'<circle cx="{x:.1f}" cy="{y}" r="7" fill="{CARD}" stroke="{c}" stroke-width="1.6"/>'
-                f'<circle cx="{x:.1f}" cy="{y}" r="3" fill="{c}"/>'
-                f'<text x="{x:.1f}" y="{ty}" text-anchor="middle" font-family="{MONO}" font-size="12" font-weight="600" fill="{WHITE}">{esc(t)}</text>'
-                f'<text x="{x:.1f}" y="{ty+17}" text-anchor="middle" font-family="{SANS}" font-size="12" fill="{GREY}">{esc(sub)}</text></g>')
-    total = 0.3 + (n - 1) * 0.25 + 0.4
-    return f"""{svg_open(W, H, "Journey: " + " → ".join(t for t, *_ in JOURNEY))}
-{defs_common(W, H, VIOLET, CORAL)}
-<defs><linearGradient id="tl" gradientUnits="userSpaceOnUse" x1="{x0}" x2="{x1}">{stops}</linearGradient>
-<clipPath id="draw"><rect x="0" y="0" height="{H}" width="{W}"><animate attributeName="width" values="{x0};{W}" dur="{total:.2f}s"/></rect></clipPath></defs>
-{card(W, H, beam_dur=10)}
-{head("~/journey", VIOLET, "2025 → now")}
-<line x1="{x0}" x2="{x1}" y1="{y}" y2="{y}" stroke="{HAIR2}" stroke-dasharray="3 5"/>
-<rect x="{x0}" y="{y-1}" width="{x1-x0}" height="2" fill="url(#tl)" clip-path="url(#draw)"/>
-<circle cy="{y}" r="2.5" fill="#fff"><animate attributeName="cx" values="{x0};{x1}" dur="5s" repeatCount="indefinite"/>
-  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.9;1" dur="5s" repeatCount="indefinite"/></circle>
-{out}
-</svg>"""
-
-
-
-# ------------------------------------------------------------ current stack from recent repos
-TOPIC_NAMES = {"fastapi": "FastAPI", "web3": "Web3", "solidity": "Solidity", "face-recognition": "Face Recognition",
-               "leaflet": "Leaflet", "static-site": "Static Sites", "smart-india-hackathon": "Smart India Hackathon",
-               "mlh": "MLH", "html": "HTML", "css": "CSS", "vercel": "Vercel", "javascript": "JavaScript", "typescript": "TypeScript", "nodejs": "Node.js", "node": "Node.js",
-               "reactjs": "React", "react": "React", "nextjs": "Next.js", "vuejs": "Vue", "tailwindcss": "Tailwind CSS",
-               "opencv": "OpenCV", "machine-learning": "Machine Learning", "deep-learning": "Deep Learning",
-               "computer-vision": "Computer Vision", "python3": "Python", "html5": "HTML5", "css3": "CSS3",
-               "mongodb": "MongoDB", "expressjs": "Express", "flask": "Flask", "django": "Django", "numpy": "NumPy",
-               "pandas": "Pandas", "tensorflow": "TensorFlow", "pytorch": "PyTorch", "scikit-learn": "scikit-learn",
-               "hacktoberfest": "Hacktoberfest", "github-actions": "GitHub Actions", "docker": "Docker",
-               "api": "APIs", "rest-api": "REST APIs", "firebase": "Firebase", "vite": "Vite", "ai": "AI", "llm": "LLMs"}
-SKIP_TOPICS = {"opencv", "machine-learning", "deep-learning", "ml", "open-source", "opensource", "smart-india-hackathon", "sih2026", "hacktoberfest", "mlh", "static-site", "website", "cricket", "report", "documentation", "event-planning", "social-impact", "hackathon"}
-SKIP_LANGS = {"Rich Text Format", "Procfile", "Batchfile", "Makefile", "Dockerfile", "Shell", "PowerShell"}
-
-
-def stack_from_repos(repos):
-    """Row 1: languages weighted by how recently each repo was updated.
-    Row 2: topics on those repos, topped up with everyday tools."""
-    langs, topics = {}, {}
-    for rank, r in enumerate(repos):
-        weight = 1 / math.sqrt(rank + 1)
-        edges = r.get("languages", {}).get("edges", [])
-        total = sum(e["size"] for e in edges) or 1
-        for e in edges:
-            n = e["node"]["name"]
-            if n in SKIP_LANGS:
-                continue
-            share = e["size"] / total
-            if share < 0.03:
-                continue
-            cur = langs.setdefault(n, [0, e["node"]["color"] or GREY])
-            cur[0] += share * weight
-        for t in (r.get("repositoryTopics") or {}).get("nodes", []):
-            slug = t["topic"]["name"]
-            if slug in SKIP_TOPICS:
-                continue
-            name = TOPIC_NAMES.get(slug, slug.replace("-", " ").title())
-            topics[name] = topics.get(name, 0) + weight
-    row1 = [(n, c) for n, (_, c) in sorted(langs.items(), key=lambda kv: -kv[1][0])][:8]
-    lang_names = {n.lower() for n, _ in row1}
-    row2 = []
-    for i, (n, _) in enumerate(sorted(topics.items(), key=lambda kv: -kv[1])):
-        if n.lower() not in lang_names and len(row2) < 8:
-            row2.append((n, SPECTRUM[i % len(SPECTRUM)]))
-    for n, c in STACK_2:
-        if len(row2) >= 6:
-            break
-        if n not in {x for x, _ in row2}:
-            row2.append((n, c))
-    return (row1 or None), row2
-
-
-
-def apply_info(r):
-    """Fill a repo's missing description/topics from scripts/project_info.json."""
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "project_info.json")
-    try:
-        info = json.load(open(path, encoding="utf-8")).get(r["name"], {})
-    except (OSError, ValueError):
-        info = {}
-    if not r.get("description") and info.get("description"):
-        r["description"] = info["description"]
-    nodes = (r.get("repositoryTopics") or {}).get("nodes") or []
-    if not nodes and info.get("topics"):
-        r["repositoryTopics"] = {"nodes": [{"topic": {"name": t}} for t in info["topics"]]}
-    return r
-
-
-def ago(iso):
-    t = dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))
-    d = (dt.datetime.now(dt.timezone.utc) - t).days
-    if d <= 0:
-        return "today"
-    if d == 1:
-        return "yesterday"
-    if d < 31:
-        return f"{d}d ago"
-    if d < 365:
-        return f"{d // 30}mo ago"
-    return f"{d // 365}y ago"
-
-
 # ============================================================ live data
 def gql(token, query, variables):
     req = urllib.request.Request(
@@ -883,7 +668,7 @@ def fetch_stats(token):
             langs.setdefault(n, [0, e["node"]["color"] or GREY])
             langs[n][0] += e["size"]
     # latest projects = my own repos, most recently pushed first (skip this profile repo)
-    recent = [apply_info(r) for r in u["repositories"]["nodes"] if r["name"].lower() != USER.lower()]
+    recent = [r for r in u["repositories"]["nodes"] if r["name"].lower() != USER.lower()]
     projects = recent[:6]
     current_stack = stack_from_repos(recent[:10])
     start = dt.datetime.fromisoformat(u["createdAt"].replace("Z", "+00:00")).date()
@@ -1157,7 +942,7 @@ def project_card(p, i):
     lang = (p.get("primaryLanguage") or {}) or {}
     col = lang.get("color") or SPECTRUM[i % len(SPECTRUM)]
     accent = SPECTRUM[i % len(SPECTRUM)]
-    desc = p.get("description") or "No description yet — the code speaks for itself."
+    desc = p.get("description") or ""
     lines = wrap(desc, 50)
     if len(lines) > 2:
         lines = lines[:2]
@@ -1291,29 +1076,23 @@ def placeholder(name, title, H=200, w=W):
 
 
 # ============================================================ build
-LABELS = [("about", "01", "About", "who i am", MINT), ("now", "02", "Now", "what i'm up to", AMBER),
-          ("stack", "03", "Stack", "from my latest repos", SKY), ("projects", "04", "Projects", "latest first", VIOLET),
-          ("brain", "05", "Brain", "how i work", PINK),
-          ("stats", "06", "Stats", "synced daily", SKY), ("rhythm", "07", "Rhythm", "when i ship", PINK),
-          ("journey", "08", "Journey", "so far", VIOLET), ("snake", "09", "Snake", "eats my commits", MINT),
-          ("ach", "10", "Achievements", "earned", AMBER), ("qotd", "11", "Fortune", "daily-ish", CORAL),
-          ("connect", "12", "Connect", "say hi", SKY)]
+LABELS = [("about", "01", "About", "who i am", MINT), ("stack", "02", "Tech Arsenal", "what i use", SKY),
+          ("projects", "03", "Projects", "latest first", VIOLET), ("stats", "04", "GitHub Stats", "synced daily", SKY),
+          ("rhythm", "05", "Rhythm", "when i commit", PINK), ("snake", "06", "Snake", "eats my contributions", MINT),
+          ("ach", "07", "Trophies & Badges", "earned", AMBER), ("qotd", "08", "Question of the Day", "", CORAL),
+          ("connect", "09", "Connect", "", SKY)]
 
 
 def build_static():
     write("boot.svg", boot())
     write("hero.svg", hero())
-    write("neural.svg", neural())
     write("helix.svg", helix())
     write("about.svg", about())
-    write("now.svg", now_card())
-    if not os.path.exists(os.path.join(ASSETS, "stack.svg")):  # live build replaces it with my real stack
-        write("stack.svg", stack())
-    write("journey.svg", journey())
+    write("stack.svg", stack())
     write("qotd.svg", qotd())
     write("footer.svg", footer())
-    write("ach_pullshark.svg", achievement("PULL SHARK", "GitHub achievement · merged pull requests", "shark", SKY))
-    write("ach_layer5.svg", achievement("FIRST DESIGN", "Layer5 badge · cloud.layer5.io", "hex", VIOLET))
+    write("ach_pullshark.svg", achievement("PULL SHARK", "GitHub Achievement", "shark", SKY))
+    write("ach_layer5.svg", achievement("FIRST DESIGN", "LAYER5 Badge", "hex", VIOLET))
     for i, (k, n, c) in enumerate([("email", "Email", CORAL), ("linkedin", "LinkedIn", SKY),
                                    ("instagram", "Instagram", PINK), ("github", "GitHub", MINT)], 1):
         write(f"btn_{k}.svg", button(f"0{i}", n, c))
@@ -1322,9 +1101,6 @@ def build_static():
 
 
 def build_live(s):
-    r1, r2 = s.get("current_stack") or (None, None)
-    if r1:
-        write("stack.svg", stack(r1, r2))
     write("stats.svg", stats_card(s))
     write("rhythm.svg", rhythm_card(s))
     for i, p in enumerate(s["projects"], 1):
