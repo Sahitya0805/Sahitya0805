@@ -1,137 +1,83 @@
-<!-- 
-  NOTE: All assets are served LOCALLY from this repository to ensure 100% reliability.
-  - assets/neon_separator.gif : Valid
-  - assets/profile_details.svg : Valid
-  - assets/* : Broken assets replaced with Static HTML
+<!--
+  Every graphic on this page is hand-built SVG in /assets,
+  rendered by scripts/build_assets.py and refreshed daily by
+  .github/workflows/update-profile.yml. Edit the CONTENT block in the script, not the SVGs.
 -->
 
 <div align="center">
 
-  <!-- Header: Reliable Typing SVGs (Served Locally) -->
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_world.svg?v=9" width="100%" />
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_header_hi.svg?v=9" width="100%" />
-  
-  <p align="center">
-    <img src="https://komarev.com/ghpvc/?username=Sahitya0805&color=1E90FF&style=for-the-badge" />
-    <img src="https://img.shields.io/github/followers/Sahitya0805?label=Followers&style=for-the-badge&color=FFDA03" />
-    <img src="https://img.shields.io/github/stars/Sahitya0805?style=for-the-badge&color=32CD32&label=Stars" />
-  </p>
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
+<img src="assets/hero.svg" width="100%" alt="Sahitya Singh — tech explorer & open-source contributor, Newton School of Technology, Bengaluru" />
+
+<br/><br/>
+
+<img src="assets/label_about.svg" width="100%" alt="01 About" />
+<img src="assets/about.svg" width="100%" alt="First-year at Newton School of Technology, Bengaluru. Machine learning, computer vision with OpenCV, open source." />
+
+<br/><br/>
+
+<img src="assets/label_now.svg" width="100%" alt="02 Now" />
+<img src="assets/now.svg" width="100%" alt="Now, learning and next" />
+
+<br/><br/>
+
+<img src="assets/label_stack.svg" width="100%" alt="03 Stack" />
+<img src="assets/stack.svg" width="100%" alt="JavaScript, Python, Java, HTML5, CSS3, OpenCV, NumPy, Git, GitHub, Linux, VS Code" />
+
+<br/><br/>
+
+<img src="assets/label_projects.svg" width="100%" alt="04 Projects" />
+<!--PROJECTS:START-->
+<a href="https://github.com/Sahitya0805?tab=repositories"><img src="assets/proj_1.svg" width="49%" alt="Project" /></a>
+<a href="https://github.com/Sahitya0805?tab=repositories"><img src="assets/proj_2.svg" width="49%" alt="Project" /></a>
+<a href="https://github.com/Sahitya0805?tab=repositories"><img src="assets/proj_3.svg" width="49%" alt="Project" /></a>
+<a href="https://github.com/Sahitya0805?tab=repositories"><img src="assets/proj_4.svg" width="49%" alt="Project" /></a>
+<a href="https://github.com/Sahitya0805?tab=repositories"><img src="assets/proj_5.svg" width="49%" alt="Project" /></a>
+<a href="https://github.com/Sahitya0805?tab=repositories"><img src="assets/proj_6.svg" width="49%" alt="Project" /></a>
+<!--PROJECTS:END-->
+
+<br/><br/>
+
+<img src="assets/label_stats.svg" width="100%" alt="05 Stats" />
+<img src="assets/stats.svg" width="100%" alt="Live GitHub stats with a 3D contribution city" />
+
+<br/><br/>
+
+<img src="assets/label_rhythm.svg" width="100%" alt="06 Rhythm" />
+<img src="assets/rhythm.svg" width="100%" alt="Contributions by weekday and by month" />
+
+<br/><br/>
+
+<img src="assets/label_journey.svg" width="100%" alt="07 Journey" />
+<img src="assets/journey.svg" width="100%" alt="Journey so far" />
+
+<br/><br/>
+
+<img src="assets/label_snake.svg" width="100%" alt="08 Snake" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/snake-spectrum.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/github-contribution-grid-snake.svg" />
+  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/snake-spectrum.svg" width="100%" alt="Snake eating my contribution graph" />
+</picture>
+
+<br/><br/>
+
+<img src="assets/label_ach.svg" width="100%" alt="09 Achievements" />
+<a href="https://github.com/Sahitya0805?tab=achievements"><img src="assets/ach_pullshark.svg" width="49%" alt="Pull Shark — GitHub achievement" /></a>
+<a href="https://cloud.layer5.io/user/55ff6b45-c08f-4ede-9cb3-27cc86a92616?tab=badges&badge=first-design"><img src="assets/ach_layer5.svg" width="49%" alt="First Design — Layer5 badge" /></a>
+
+<br/><br/>
+
+<img src="assets/label_qotd.svg" width="100%" alt="10 Fortune" />
+<img src="assets/qotd.svg" width="100%" alt="Rotating programmer jokes" />
+
+<br/><br/>
+
+<img src="assets/label_connect.svg" width="100%" alt="11 Connect" />
+<a href="mailto:sahityasingh200805@gmail.com"><img src="assets/btn_email.svg" width="23.5%" alt="Email" /></a>
+<a href="https://www.linkedin.com/in/sahitya-singh-7012b137b"><img src="assets/btn_linkedin.svg" width="23.5%" alt="LinkedIn" /></a>
+<a href="https://www.instagram.com/sahit_ya8050"><img src="assets/btn_instagram.svg" width="23.5%" alt="Instagram" /></a>
+<a href="https://github.com/Sahitya0805"><img src="assets/btn_github.svg" width="23.5%" alt="GitHub" /></a>
+
+<img src="assets/footer.svg" width="100%" alt="" />
 
 </div>
-
-<!-- About Me Section -->
-## 🧠 About Me
-<div align="center">
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_1.svg?v=9" width="1200" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_2.svg?v=9" width="1200" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_3.svg?v=9" width="1200" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_about_4.svg?v=9" width="1200" />
-  </p>
-  
-</div>
-
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
-
-<!-- Tech Arsenal -->
-## 🛠️ Tech Arsenal
-<div align="center">
-
-### 👨‍💻 Programming Languages
-| JavaScript | Python | Java |
-|:--:|:--:|:--:|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" width="50"/> |
-
-### 🚀 Frontend Development
-| HTML5 | CSS3 |
-|:--:|:--:|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50"/> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50"/> |
-
-### ☁️ DevOps & Cloud
-| Git |
-|:--:|
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="50"/> |
-
-</div>
-
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
-
-<!-- GitHub Stats Section -->
-## 📊 GitHub Stats
-<div align="center">
- 
- <!-- Profile Details (Valid) -->
- <p align="center">
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/profile_details.svg?v=9" height="160" alt="Profile Details" />
- </p>
-
- <!-- Languages & Commits (Valid) -->
- <div style="display: flex; justify-content: center; margin-top: 10px;">
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/repos_per_language.svg?v=9" width="400" alt="Repos per Language" />
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/most_commit_language.svg?v=9" width="400" alt="Most Commit Language" />
- </div>
- 
- <br>
- 
- <!-- Productive Time (Valid) -->
- <p align="center">
-   <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/productive_time.svg?v=9" width="400" alt="Productive Time" />
- </p>
-
- <!-- Note: Removed Broken Vercel Cards (Github Stats, Top Langs) -->
-
-</div>
-
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
-
-## 🐍 Watch the Snake Eat My Contributions!
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/output/github-contribution-grid-snake-dark.svg?v=9" alt="snake animation" width="100%" />
-</p>
-
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
-
-## 📈 GitHub Contribution Graph
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Sahitya0805&theme=react-dark&hide_border=true&area=true" alt="Contribution Graph" width="100%" />
-</p>
-
-  <p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
-
-</div>
-
-## 🏆 Trophies and Badges
-<div align="center">
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/trophies.svg?v=9" width="100%" alt="Trophies" />
-  </p>
-   <p align="center">
-    <img src="https://img.shields.io/badge/Achievement-Pull%20Shark-007ec6?style=for-the-badge&logo=github" /> 🦈<br><br>
-    <a href="https://cloud.layer5.io/user/55ff6b45-c08f-4ede-9cb3-27cc86a92616?tab=badges&badge=first-design" alt="First Design" ><img width="175px" height="252px" src="https://badges.layer5.io/assets/badges/first-design/first-design.png" alt="First Design" /></a><br />
-    <sup><a href="https://badges.layer5.io">LAYER5 Badge</a></sup>
-  </p>
-</div>
-
-<p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
-
-## 🤔 Question of the Day
-<div align="center">
-  <p align="center">
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_question.svg?v=9" width="1200" /><br>
-    <img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/qotd_answer.svg?v=9" width="1200" />
-  </p>
-</div>
-
-<p align="center"><img src="https://raw.githubusercontent.com/Sahitya0805/Sahitya0805/main/assets/typing_thunder.svg?v=9" width="1200" /></p>
-
-## 🌐 Connect With Me
-<p align="center">
-  <a href="mailto:sahityasingh200805@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"/></a>
-  <a href="https://www.linkedin.com/in/sahitya-singh-7012b137b"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-  <a href="https://www.instagram.com/sahit_ya8050?igsh=YXNpY2p5Y3ZqMHRv"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/></a>
-</p>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:00FF00,100:0047AB&height=120&section=footer" />
-</p>
