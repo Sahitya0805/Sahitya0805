@@ -978,7 +978,7 @@ def project_card(p, i):
     if p.get("pushedAt"):
         meta += (f'<text x="{w-26}" y="136" text-anchor="end" font-family="{MONO}" font-size="11" fill="{DARK}">'
                  f'<tspan fill="{MINT}">●</tspan> updated {ago(p["pushedAt"])}</text>')
-    return f"""{svg_open(w, H, f"{p['name']}: {desc}")}
+    return f"""{svg_open(w, H, f"{p['name']}: {desc}" if desc else p["name"])}
 {defs_common(w, H, accent, col)}
 <defs><clipPath id="clip"><rect width="{w}" height="{H}" rx="14"/></clipPath></defs>
 {card(w, H, rx=14, beam_dur=8 + i)}
