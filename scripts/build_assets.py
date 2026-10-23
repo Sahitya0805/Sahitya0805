@@ -670,7 +670,6 @@ def fetch_stats(token):
     # latest projects = my own repos, most recently pushed first (skip this profile repo)
     recent = [r for r in u["repositories"]["nodes"] if r["name"].lower() != USER.lower()]
     projects = recent[:6]
-    current_stack = stack_from_repos(recent[:10])
     start = dt.datetime.fromisoformat(u["createdAt"].replace("Z", "+00:00")).date()
     today = dt.datetime.now(dt.timezone.utc).date()
     cq = """query($u:String!,$f:DateTime,$t:DateTime){user(login:$u){contributionsCollection(from:$f,to:$t){
@@ -687,7 +686,7 @@ def fetch_stats(token):
     return dict(today=today, start=start, days=days, commits=commits, prs=u["pullRequests"]["totalCount"],
                 repos=u["repositories"]["totalCount"], stars=stars, followers=u["followers"]["totalCount"],
                 langs=sorted(((k, v[0], v[1]) for k, v in langs.items()), key=lambda x: -x[1]),
-                projects=projects[:6], current_stack=current_stack)
+                projects=projects[:6])
 
 
 def streaks(days, today):
@@ -937,6 +936,20 @@ def rhythm_card(s):
 
 
 # ============================================================ project cards
+def ago(iso):
+    t = dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    d = (dt.datetime.now(dt.timezone.utc) - t).days
+    if d <= 0:
+        return "today"
+    if d == 1:
+        return "yesterday"
+    if d < 31:
+        return f"{d}d ago"
+    if d < 365:
+        return f"{d // 30}mo ago"
+    return f"{d // 365}y ago"
+
+
 def project_card(p, i):
     w, H = 405, 160
     lang = (p.get("primaryLanguage") or {}) or {}
@@ -1123,7 +1136,7 @@ def main():
         return
     try:
         s = fetch_stats(token)
-    except Exception as e:  # keep the last good cards
+    except (OSError, RuntimeError, ValueError) as e:  # network/API trouble: keep the last good cards
         print("stats fetch failed, keeping previous cards:", e, file=sys.stderr)
         return
     build_live(s)
