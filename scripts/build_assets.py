@@ -470,7 +470,7 @@ def gql(token, query, variables):
     return data["data"]
 
 
-REPO_FIELDS = "name description url stargazerCount forkCount isFork primaryLanguage{name color}"
+REPO_FIELDS = "name description url stargazerCount forkCount isFork owner{login} primaryLanguage{name color}"
 
 
 def fetch_stats(token):
@@ -588,7 +588,8 @@ def city(days, today, weeks=53, oy=128, ox=96, u=(12.6, 3.0), v=(-5.2, 6.4), max
             pts = " ".join(f"{x:.1f},{y:.1f}" for x, y in (p0, p1, p2, p3))
             out.append(f'<polygon points="{pts}" fill="{EMPTY_TOP}"><title>{d:%a %d %b %Y}: no contributions</title></polygon>')
             continue
-        h = 5 + (maxh - 5) * math.sqrt(val / mx)
+        # log scale: one huge day (e.g. a bulk import) should not flatten the rest of the year
+        h = 5 + (maxh - 5) * math.log1p(val) / math.log1p(mx)
         base = GH_LEVELS[L - 1]
         top, front, right = lighten(base, 0.10), shade(base, 0.72), shade(base, 0.48)
         up = lambda p: (p[0], p[1] - h)
@@ -648,7 +649,8 @@ def stats_card(s):
                  f'<text x="{x+11:.0f}" y="{y-2}" font-family="{MONO}" font-size="9.5" letter-spacing="1" fill="{DARK}">{k}</text>'
                  f'<text x="{x-1:.0f}" y="{y+34}" font-family="{SANS}" font-size="32" font-weight="300" letter-spacing="-1" fill="{col}">{v}</text>'
                  f'<text x="{x:.0f}" y="{y+52}" font-family="{MONO}" font-size="10" fill="{GREY}">{esc(sub)}</text></g>')
-    langs = s["langs"][:6]
+    allt = sum(v for _, v, _ in s["langs"]) or 1
+    langs = [l for l in s["langs"] if l[1] / allt >= 0.01][:6]
     lt = sum(v for _, v, _ in langs) or 1
     bx, bw, by = 36, W - 72, 534
     bar, leg, x = "", "", bx
@@ -770,14 +772,19 @@ def project_card(p, i):
         lines = lines[:2]
         lines[1] = lines[1][:47].rstrip() + "…"
     name = p["name"] if len(p["name"]) <= 34 else p["name"][:33] + "…"
+    owner = ((p.get("owner") or {}).get("login") or USER)
+    contributed = owner.lower() != USER.lower()
     dl = "".join(f'<text x="28" y="{86 + k*20}" font-family="{SANS}" font-size="13" fill="{GREY}">{esc(l)}</text>' for k, l in enumerate(lines))
     meta = ""
     if lang.get("name"):
         meta += (f'<circle cx="32" cy="132" r="5" fill="{col}"/>'
                  f'<text x="44" y="136" font-family="{MONO}" font-size="11.5" fill="#bdbdbd">{esc(lang["name"])}</text>')
     mx = 44 + len(lang.get("name") or "") * 7.2 + 22 if lang.get("name") else 28
-    meta += (f'<text x="{mx:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{AMBER}">★ <tspan fill="#bdbdbd">{p.get("stargazerCount", 0)}</tspan></text>'
-             f'<text x="{mx+56:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{SKY}">⑂ <tspan fill="#bdbdbd">{p.get("forkCount", 0)}</tspan></text>')
+    if contributed:
+        meta += (f'<text x="{mx:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{VIOLET}">↳ <tspan fill="#bdbdbd">contributed to {esc(owner)}</tspan></text>')
+    else:
+        meta += (f'<text x="{mx:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{AMBER}">★ <tspan fill="#bdbdbd">{p.get("stargazerCount", 0)}</tspan></text>'
+                 f'<text x="{mx+56:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{SKY}">⑂ <tspan fill="#bdbdbd">{p.get("forkCount", 0)}</tspan></text>')
     return f"""{svg_open(w, H, f"{p['name']}: {desc}")}
 {defs_common(w, H, accent, col)}
 <defs><clipPath id="clip"><rect width="{w}" height="{H}" rx="14"/></clipPath></defs>
