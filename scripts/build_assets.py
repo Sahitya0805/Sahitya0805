@@ -402,12 +402,15 @@ def chips_row(items):
     return out, x
 
 
-def stack():
+def stack(row1=None, row2=None, note="tools i reach for"):
     H = 130
-    a, wa = chips_row(STACK_1)
-    b, wb = chips_row(STACK_2)
+    row1, row2 = row1 or STACK_1, row2 or STACK_2
+    a, wa = chips_row(row1)
+    b, wb = chips_row(row2)
+    # repeat each row enough times to always overflow the card while scrolling
     rep = lambda s, w, n: "".join(f'<g transform="translate({i*w:.1f},0)">{s}</g>' for i in range(n))
-    names = ", ".join(n for n, _ in STACK_1 + STACK_2)
+    na, nb = max(3, math.ceil(2 * W / wa) + 1), max(3, math.ceil(2 * W / wb) + 1)
+    names = ", ".join(n for n, _ in row1 + row2)
     return f"""{svg_open(W, H, "Stack: " + names)}
 {defs_common(W, H)}
 <defs>
@@ -416,8 +419,8 @@ def stack():
 </defs>
 {card(W, H, beam=False)}
 <g mask="url(#edges)">
-  <g transform="translate(0,22)"><g>{rep(a, wa, 3)}<animateTransform attributeName="transform" type="translate" values="0 0;-{wa:.1f} 0" dur="38s" repeatCount="indefinite"/></g></g>
-  <g transform="translate(0,72)"><g>{rep(b, wb, 3)}<animateTransform attributeName="transform" type="translate" values="-{wb:.1f} 0;0 0" dur="44s" repeatCount="indefinite"/></g></g>
+  <g transform="translate(0,22)"><g>{rep(a, wa, na)}<animateTransform attributeName="transform" type="translate" values="0 0;-{wa:.1f} 0" dur="38s" repeatCount="indefinite"/></g></g>
+  <g transform="translate(0,72)"><g>{rep(b, wb, nb)}<animateTransform attributeName="transform" type="translate" values="-{wb:.1f} 0;0 0" dur="44s" repeatCount="indefinite"/></g></g>
 </g>
 </svg>"""
 
@@ -457,6 +460,68 @@ def journey():
 </svg>"""
 
 
+
+# ------------------------------------------------------------ current stack from recent repos
+TOPIC_NAMES = {"javascript": "JavaScript", "typescript": "TypeScript", "nodejs": "Node.js", "node": "Node.js",
+               "reactjs": "React", "react": "React", "nextjs": "Next.js", "vuejs": "Vue", "tailwindcss": "Tailwind CSS",
+               "opencv": "OpenCV", "machine-learning": "Machine Learning", "deep-learning": "Deep Learning",
+               "computer-vision": "Computer Vision", "python3": "Python", "html5": "HTML5", "css3": "CSS3",
+               "mongodb": "MongoDB", "expressjs": "Express", "flask": "Flask", "django": "Django", "numpy": "NumPy",
+               "pandas": "Pandas", "tensorflow": "TensorFlow", "pytorch": "PyTorch", "scikit-learn": "scikit-learn",
+               "hacktoberfest": "Hacktoberfest", "github-actions": "GitHub Actions", "docker": "Docker",
+               "api": "APIs", "rest-api": "REST APIs", "firebase": "Firebase", "vite": "Vite", "ai": "AI", "llm": "LLMs"}
+SKIP_LANGS = {"Rich Text Format", "Procfile", "Batchfile", "Makefile", "Dockerfile", "Shell", "PowerShell"}
+
+
+def stack_from_repos(repos):
+    """Row 1: languages weighted by how recently each repo was updated.
+    Row 2: topics on those repos, topped up with everyday tools."""
+    langs, topics = {}, {}
+    for rank, r in enumerate(repos):
+        weight = 1 / math.sqrt(rank + 1)
+        edges = r.get("languages", {}).get("edges", [])
+        total = sum(e["size"] for e in edges) or 1
+        for e in edges:
+            n = e["node"]["name"]
+            if n in SKIP_LANGS:
+                continue
+            share = e["size"] / total
+            if share < 0.03:
+                continue
+            cur = langs.setdefault(n, [0, e["node"]["color"] or GREY])
+            cur[0] += share * weight
+        for t in (r.get("repositoryTopics") or {}).get("nodes", []):
+            slug = t["topic"]["name"]
+            name = TOPIC_NAMES.get(slug, slug.replace("-", " ").title())
+            topics[name] = topics.get(name, 0) + weight
+    row1 = [(n, c) for n, (_, c) in sorted(langs.items(), key=lambda kv: -kv[1][0])][:8]
+    lang_names = {n.lower() for n, _ in row1}
+    row2 = []
+    for i, (n, _) in enumerate(sorted(topics.items(), key=lambda kv: -kv[1])):
+        if n.lower() not in lang_names and len(row2) < 8:
+            row2.append((n, SPECTRUM[i % len(SPECTRUM)]))
+    for n, c in STACK_2:
+        if len(row2) >= 6:
+            break
+        if n not in {x for x, _ in row2}:
+            row2.append((n, c))
+    return (row1 or None), row2
+
+
+def ago(iso):
+    t = dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    d = (dt.datetime.now(dt.timezone.utc) - t).days
+    if d <= 0:
+        return "today"
+    if d == 1:
+        return "yesterday"
+    if d < 31:
+        return f"{d}d ago"
+    if d < 365:
+        return f"{d // 30}mo ago"
+    return f"{d // 365}y ago"
+
+
 # ============================================================ live data
 def gql(token, query, variables):
     req = urllib.request.Request(
@@ -470,7 +535,7 @@ def gql(token, query, variables):
     return data["data"]
 
 
-REPO_FIELDS = "name description url stargazerCount forkCount isFork owner{login} primaryLanguage{name color}"
+REPO_FIELDS = "name description url stargazerCount forkCount isFork pushedAt owner{login} primaryLanguage{name color}"
 
 
 def fetch_stats(token):
@@ -478,7 +543,7 @@ def fetch_stats(token):
       followers{{totalCount}} pullRequests{{totalCount}}
       pinnedItems(first:6,types:REPOSITORY){{nodes{{... on Repository{{{REPO_FIELDS}}}}}}}
       repositories(ownerAffiliations:OWNER,privacy:PUBLIC,first:100,isFork:false,orderBy:{{field:PUSHED_AT,direction:DESC}}){{totalCount
-        nodes{{{REPO_FIELDS} languages(first:10,orderBy:{{field:SIZE,direction:DESC}}){{edges{{size node{{name color}}}}}}}}}}}}}}"""
+        nodes{{{REPO_FIELDS} repositoryTopics(first:10){{nodes{{topic{{name}}}}}} languages(first:10,orderBy:{{field:SIZE,direction:DESC}}){{edges{{size node{{name color}}}}}}}}}}}}}}"""
     u = gql(token, q, {"u": USER})["user"]
     langs, stars = {}, 0
     for r in u["repositories"]["nodes"]:
@@ -487,14 +552,10 @@ def fetch_stats(token):
             n = e["node"]["name"]
             langs.setdefault(n, [0, e["node"]["color"] or GREY])
             langs[n][0] += e["size"]
-    projects = [p for p in u["pinnedItems"]["nodes"] if p]
-    seen = {p["name"] for p in projects}
-    for r in u["repositories"]["nodes"]:
-        if len(projects) >= 6:
-            break
-        if r["name"] not in seen and r["name"].lower() != USER.lower():
-            projects.append(r)
-            seen.add(r["name"])
+    # latest projects = my own repos, most recently pushed first (skip this profile repo)
+    recent = [r for r in u["repositories"]["nodes"] if r["name"].lower() != USER.lower()]
+    projects = recent[:6]
+    current_stack = stack_from_repos(recent[:10])
     start = dt.datetime.fromisoformat(u["createdAt"].replace("Z", "+00:00")).date()
     today = dt.datetime.now(dt.timezone.utc).date()
     cq = """query($u:String!,$f:DateTime,$t:DateTime){user(login:$u){contributionsCollection(from:$f,to:$t){
@@ -511,7 +572,7 @@ def fetch_stats(token):
     return dict(today=today, start=start, days=days, commits=commits, prs=u["pullRequests"]["totalCount"],
                 repos=u["repositories"]["totalCount"], stars=stars, followers=u["followers"]["totalCount"],
                 langs=sorted(((k, v[0], v[1]) for k, v in langs.items()), key=lambda x: -x[1]),
-                projects=projects[:6])
+                projects=projects[:6], current_stack=current_stack)
 
 
 def streaks(days, today):
@@ -785,8 +846,10 @@ def project_card(p, i):
         owner = owner if len(owner) <= room else owner[:max(4, room - 1)] + "…"
         meta += (f'<text x="{mx:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{VIOLET}">↳ <tspan fill="#bdbdbd">contributed to {esc(owner)}</tspan></text>')
     else:
-        meta += (f'<text x="{mx:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{AMBER}">★ <tspan fill="#bdbdbd">{p.get("stargazerCount", 0)}</tspan></text>'
-                 f'<text x="{mx+56:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{SKY}">⑂ <tspan fill="#bdbdbd">{p.get("forkCount", 0)}</tspan></text>')
+        meta += (f'<text x="{mx:.0f}" y="136" font-family="{MONO}" font-size="11.5" fill="{AMBER}">★ <tspan fill="#bdbdbd">{p.get("stargazerCount", 0)}</tspan></text>')
+    if p.get("pushedAt"):
+        meta += (f'<text x="{w-26}" y="136" text-anchor="end" font-family="{MONO}" font-size="11" fill="{DARK}">'
+                 f'<tspan fill="{MINT}">●</tspan> updated {ago(p["pushedAt"])}</text>')
     return f"""{svg_open(w, H, f"{p['name']}: {desc}")}
 {defs_common(w, H, accent, col)}
 <defs><clipPath id="clip"><rect width="{w}" height="{H}" rx="14"/></clipPath></defs>
@@ -899,7 +962,7 @@ def placeholder(name, title, H=200, w=W):
 
 # ============================================================ build
 LABELS = [("about", "01", "About", "who i am", MINT), ("now", "02", "Now", "what i'm up to", AMBER),
-          ("stack", "03", "Stack", "tools i reach for", SKY), ("projects", "04", "Projects", "pinned & recent", VIOLET),
+          ("stack", "03", "Stack", "from my latest repos", SKY), ("projects", "04", "Projects", "latest first", VIOLET),
           ("stats", "05", "Stats", "synced daily", SKY), ("rhythm", "06", "Rhythm", "when i ship", PINK),
           ("journey", "07", "Journey", "so far", VIOLET), ("snake", "08", "Snake", "eats my commits", MINT),
           ("ach", "09", "Achievements", "earned", AMBER), ("qotd", "10", "Fortune", "daily-ish", CORAL),
@@ -924,6 +987,9 @@ def build_static():
 
 
 def build_live(s):
+    r1, r2 = s.get("current_stack") or (None, None)
+    if r1:
+        write("stack.svg", stack(r1, r2))
     write("stats.svg", stats_card(s))
     write("rhythm.svg", rhythm_card(s))
     for i, p in enumerate(s["projects"], 1):

@@ -21,7 +21,7 @@
 <br/><br/>
 
 <img src="assets/label_stack.svg" width="100%" alt="03 Stack" />
-<img src="assets/stack.svg" width="100%" alt="JavaScript, Python, Java, HTML5, CSS3, OpenCV, NumPy, Git, GitHub, Linux, VS Code" />
+<img src="assets/stack.svg" width="100%" alt="Languages and tools from my most recently updated repositories" />
 
 <br/><br/>
 
