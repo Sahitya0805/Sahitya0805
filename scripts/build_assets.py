@@ -63,7 +63,12 @@ ABOUT_ROWS = [("NAME", "Sahitya Singh", CORAL), ("ROLE", "Tech Explorer", MINT),
 
 
 
-FORTUNES = [("Why do programmers prefer dark mode?", "because light attracts bugs!", MINT)]
+FORTUNES = [
+    ("Why did the developer go broke?", "because he used up all his cache!", MINT),
+    ("How many programmers does it take to change a light bulb?", "none, that's a hardware problem.", SKY),
+    ("Why do Java developers wear glasses?", "because they don't C#.", AMBER),
+    ("What's a programmer's favourite place to hang out?", "foo bar.", PINK),
+]
 
 STACK_1 = [("JavaScript", "#f1e05a"), ("Python", "#3572A5"), ("Java", "#b07219")]
 STACK_2 = [("HTML5", "#e34c26"), ("CSS3", "#663399"), ("React", "#61DAFB"), ("Git", "#f05032")]
@@ -1054,7 +1059,7 @@ def achievement(title, sub, kind, color):
 
 # ============================================================ connect + footer
 def button(idx, name, color):
-    w, H = 196, 52
+    w, H = 405, 52
     return f"""{svg_open(w, H, name)}
 <rect x="0.5" y="0.5" width="{w-1}" height="{H-1}" rx="12" fill="{color}" fill-opacity="0.06" stroke="{color}" stroke-opacity="0.35"/>
 <text x="18" y="31" font-family="{MONO}" font-size="10" fill="{color}" opacity="0.7">{idx}</text>
@@ -1103,8 +1108,7 @@ def build_static():
     write("footer.svg", footer())
     write("ach_pullshark.svg", achievement("PULL SHARK", "GitHub Achievement", "shark", SKY))
     write("ach_layer5.svg", achievement("FIRST DESIGN", "LAYER5 Badge", "hex", VIOLET))
-    for i, (k, n, c) in enumerate([("email", "Email", CORAL), ("linkedin", "LinkedIn", SKY),
-                                   ("instagram", "Instagram", PINK), ("github", "GitHub", MINT)], 1):
+    for i, (k, n, c) in enumerate([("linkedin", "LinkedIn", SKY), ("instagram", "Instagram", PINK)], 1):
         write(f"btn_{k}.svg", button(f"0{i}", n, c))
     for k, i, t, tag, c in LABELS:
         write(f"label_{k}.svg", label(i, t, tag, c))

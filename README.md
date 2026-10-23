@@ -59,15 +59,13 @@
 <br/><br/>
 
 <img src="assets/label_qotd.svg" width="100%" alt="08 Question of the Day" />
-<img src="assets/qotd.svg" width="100%" alt="Why do programmers prefer dark mode? Because light attracts bugs!" />
+<img src="assets/qotd.svg" width="100%" alt="Question of the day: a rotating programmer joke" />
 
 <br/><br/>
 
 <img src="assets/label_connect.svg" width="100%" alt="09 Connect With Me" />
-<a href="mailto:sahityasingh200805@gmail.com"><img src="assets/btn_email.svg" width="23.5%" alt="Gmail" /></a>
-<a href="https://www.linkedin.com/in/sahitya-singh-7012b137b"><img src="assets/btn_linkedin.svg" width="23.5%" alt="LinkedIn" /></a>
-<a href="https://www.instagram.com/sahit_ya8050"><img src="assets/btn_instagram.svg" width="23.5%" alt="Instagram" /></a>
-<a href="https://github.com/Sahitya0805"><img src="assets/btn_github.svg" width="23.5%" alt="GitHub" /></a>
+<a href="https://www.linkedin.com/in/sahitya-singh-7012b137b"><img src="assets/btn_linkedin.svg" width="49%" alt="LinkedIn" /></a>
+<a href="https://www.instagram.com/sahit_ya8050"><img src="assets/btn_instagram.svg" width="49%" alt="Instagram" /></a>
 
 <img src="assets/footer.svg" width="100%" alt="" />
 
