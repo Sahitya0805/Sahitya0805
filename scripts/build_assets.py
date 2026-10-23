@@ -49,37 +49,38 @@ SPECTRUM = [VIOLET, SKY, MINT, AMBER, CORAL]
 GLYPHS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&*+=<>/?$"
 
 # =================================================================== CONTENT
-ROLES = [("exploring machine learning", MINT), ("teaching computers to see (OpenCV)", SKY),
-         ("shipping open-source contributions", VIOLET), ("dreaming in algorithms", AMBER)]
+ROLES = [("building FaceTrace — vision meets blockchain", MINT), ("shipping HUNAR for Smart India Hackathon", SKY),
+         ("crafting the Cayman Super Kings website", VIOLET), ("running hackathons with DevForge", AMBER),
+         ("dreaming in algorithms", PINK)]
 
 ABOUT_PARA = ["I'm Sahitya — a first-year student at Newton",
-              "School of Technology who likes taking things",
-              "apart to see how they think. Lately that means",
-              "machine learning, computer vision with OpenCV,",
-              "and small, steady open-source contributions."]
+              "School of Technology who builds for the web",
+              "and beyond: club websites, hackathon platforms",
+              "and FaceTrace, a pipeline that traces faces",
+              "and anchors its proofs on the blockchain."]
 ABOUT_ROWS = [("BASED IN", "Bengaluru, India", CORAL), ("STUDYING", "Newton School of Tech · Y1", SKY),
-              ("FOCUS", "ML · Computer Vision", MINT), ("WRITES", "JavaScript · Python · Java", AMBER),
-              ("CURRENTLY", "Open-source contributions", VIOLET), ("MOTTO", "Dream in algorithms", PINK)]
+              ("FOCUS", "Web · Computer Vision · Web3", MINT), ("WRITES", "TypeScript · Python · JavaScript", AMBER),
+              ("CURRENTLY", "Building FaceTrace", VIOLET), ("MOTTO", "Dream in algorithms", PINK)]
 
-NOW = [("NOW", MINT, ["First year at NST Bengaluru", "Contributing to open source", "Building small web projects"]),
-       ("LEARNING", VIOLET, ["Machine learning foundations", "OpenCV & image processing", "Data structures & algorithms"]),
-       ("NEXT", AMBER, ["Ship an ML + vision project", "More merged pull requests", "Hackathons & collaborations"])]
+NOW = [("NOW", MINT, ["First year at NST Bengaluru", "Building FaceTrace", "Organising with DevForge"]),
+       ("LEARNING", VIOLET, ["TypeScript & React", "Computer vision pipelines", "Solidity & smart contracts"]),
+       ("NEXT", AMBER, ["Take HUNAR beyond SIH", "More hackathon wins", "Bigger collaborations"])]
 
 JOURNEY = [("Hello, GitHub", "joined & first commits", VIOLET),
            ("Started at NST", "Newton School of Tech, BLR", SKY),
            ("First merged PR", "unlocked Pull Shark", MINT),
            ("Layer5 badge", "First Design", AMBER),
-           ("40+ repositories", "and still shipping", CORAL),
-           ("What's next?", "ML + vision projects", PINK)]
+           ("SIH 2026", "Project HUNAR", CORAL),
+           ("What's next?", "FaceTrace v2", PINK)]
 
 FORTUNES = [("Why do programmers prefer dark mode?", "because light attracts bugs.", MINT),
             ("How many programmers to change a light bulb?", "none — that's a hardware problem.", SKY),
             ("Why did the developer go broke?", "they used up all their cache.", AMBER)]
 
 STACK_1 = [("JavaScript", "#f1e05a"), ("Python", "#3572A5"), ("Java", "#b07219"), ("HTML5", "#e34c26"),
-           ("CSS3", "#663399"), ("OpenCV", MINT), ("NumPy", "#4dabcf")]
+           ("CSS3", "#663399"), ("TypeScript", "#3178c6"), ("Solidity", "#AA6746")]
 STACK_2 = [("Git", "#f05032"), ("GitHub", WHITE), ("Linux", "#fcc624"), ("VS Code", "#23a8f2"),
-           ("Machine Learning", VIOLET), ("Computer Vision", SKY), ("Open Source", PINK)]
+           ("Vercel", WHITE), ("Computer Vision", SKY), ("Tailwind CSS", PINK)]
 
 
 # =================================================================== helpers
@@ -287,9 +288,11 @@ def hero():
                      f'<animate attributeName="y" values="272;272;266;266;262;262" keyTimes="{kt}" dur="{RT}s" repeatCount="indefinite"/></text>')
     bar = "".join(f'<rect x="{36 + i*26}" y="166" width="22" height="3" rx="1.5" fill="{c}">{fade_in(1.0 + i*0.08)}</rect>'
                   for i, c in enumerate(SPECTRUM))
-    return f"""{svg_open(W, H, "Sahitya Singh — tech explorer and open-source contributor, Newton School of Technology, Bengaluru")}
+    return f"""{svg_open(W, H, "Sahitya Singh — tech explorer and builder, Newton School of Technology, Bengaluru")}
 {defs_common(W, H, VIOLET, MINT)}
-<defs><clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath></defs>
+<defs><clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath>
+<linearGradient id="beamV" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="{SKY}" stop-opacity="0"/><stop offset="0.85" stop-color="{SKY}" stop-opacity="0.06"/><stop offset="1" stop-color="#fff" stop-opacity="0.18"/></linearGradient>
+<filter id="arcglow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
 {card(W, H, beam_dur=11)}
 <g clip-path="url(#clip)">
   <rect width="{W}" height="{H}" fill="url(#grid)" mask="url(#gridmask)"/>
@@ -298,16 +301,21 @@ def hero():
   {glow_blob(700, 90, 110, CORAL, 0.08, -50, 20)}
   {globe(640, 178, 118)}
   {orbit_tags(640, 178, 118)}
+  {arcs(640, 178, 118)}
   {meteors()}
+  {sparks(20, W-20, 30, H-10)}
+  <rect x="0" y="-80" width="{W}" height="80" fill="url(#beamV)"><animate attributeName="y" values="-80;{H}" dur="5.5s" repeatCount="indefinite"/></rect>
+  {glitch_bars(W, H, 5, 0.86, 8)}
 </g>
 <text x="36" y="42" font-family="{MONO}" font-size="11" letter-spacing="1" fill="{DARK}">{USER.lower()} / README.md</text>
 <g font-family="{MONO}" font-size="11" letter-spacing="1.5">
   <circle cx="{W-36-19*(11*0.6+1.5)-12:.0f}" cy="38" r="3.5" fill="{MINT}"><animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/></circle>
   <text x="{W-36}" y="42" text-anchor="end" fill="{GREY}">AVAILABLE TO COLLAB</text>
 </g>
-{scramble(name, 36, 146, size, WHITE, T, adv=adv, seed=8, ls=ls, weight=600)}
+<g>{scramble(name, 36, 146, size, WHITE, T, adv=adv, seed=8, ls=ls, weight=600)}{jitter(5, 0.86)}</g>
+{rgb_split(name, 36, 146, size, adv, 5, 0.86)}
 {bar}
-<text x="36" y="200" font-family="{SANS}" font-size="16" fill="{GREY}"><tspan fill="{WHITE}">Tech explorer</tspan> &amp; <tspan fill="{WHITE}">open-source contributor.</tspan>{fade_in(0.9)}</text>
+<text x="36" y="200" font-family="{SANS}" font-size="16" fill="{GREY}"><tspan fill="{WHITE}">Tech explorer</tspan> &amp; <tspan fill="{WHITE}">builder of wild ideas.</tspan>{fade_in(0.9)}</text>
 <text x="36" y="224" font-family="{SANS}" font-size="16" fill="{GREY}">First-year at Newton School of Technology.{fade_in(1.1)}</text>
 <text x="36" y="266" font-family="{MONO}" font-size="13" fill="{GREY}">currently →{fade_in(1.3)}</text>
 {role_svg}
@@ -321,12 +329,110 @@ def hero():
 </svg>"""
 
 
+
+# ------------------------------------------------------------ chaos helpers
+def matrix_rain(w, h, cols=None, op=0.16, seed=11):
+    rnd = random.Random(seed)
+    cols = cols or int(w / 22)
+    out = ""
+    for i in range(cols):
+        x = 12 + i * (w - 24) / (cols - 1)
+        n = rnd.randint(6, 12)
+        col = SPECTRUM[i % len(SPECTRUM)]
+        dur = rnd.uniform(3.5, 8)
+        start = rnd.uniform(0, dur)
+        glyphs = ""
+        for k in range(n):
+            g = esc(rnd.choice("01アイウエオカキクケコｱｲｳｴｵ{}<>/=*#$"))
+            fo = (k + 1) / n
+            glyphs += f'<text x="0" y="{k*15}" text-anchor="middle" font-family="{MONO}" font-size="12" fill="{"#ffffff" if k == n-1 else col}" opacity="{fo:.2f}">{g}</text>'
+        out += (f'<g transform="translate({x:.1f},-200)">{glyphs}'
+                f'<animateTransform attributeName="transform" type="translate" values="{x:.1f} {-n*15};{x:.1f} {h+20}" '
+                f'dur="{dur:.1f}s" begin="-{start:.1f}s" repeatCount="indefinite"/></g>')
+    return f'<g opacity="{op}">{out}</g>'
+
+
+def jitter(dur=6, at=0.82):
+    """Occasional 'bad signal' shake applied to the parent group."""
+    vals = "0 0;0 0;-4 1;5 -1;-2 0;3 1;0 0;0 0"
+    kt = f"0;{at:.3f};{at+0.01:.3f};{at+0.02:.3f};{at+0.03:.3f};{at+0.04:.3f};{at+0.05:.3f};1"
+    return (f'<animateTransform attributeName="transform" type="translate" values="{vals}" keyTimes="{kt}" '
+            f'calcMode="discrete" dur="{dur}s" repeatCount="indefinite"/>')
+
+
+def glitch_bars(w, h, dur=6, at=0.82, seed=3):
+    rnd = random.Random(seed)
+    out = ""
+    for i in range(5):
+        y = rnd.uniform(0.1, 0.9) * h
+        hh = rnd.uniform(3, 14)
+        col = [SKY, PINK, MINT, VIOLET, AMBER][i]
+        t = at + i * 0.008
+        out += (f'<rect x="{rnd.uniform(-40, 40):.0f}" y="{y:.0f}" width="{w}" height="{hh:.0f}" fill="{col}" opacity="0">'
+                f'<animate attributeName="opacity" values="0;0;0.35;0;0" keyTimes="0;{t:.3f};{t+0.006:.3f};{t+0.02:.3f};1" '
+                f'calcMode="discrete" dur="{dur}s" repeatCount="indefinite"/></rect>')
+    return out
+
+
+def sparks(x0, x1, y0, y1, n=22, seed=5):
+    rnd = random.Random(seed)
+    out = ""
+    for i in range(n):
+        x = rnd.uniform(x0, x1)
+        col = SPECTRUM[i % len(SPECTRUM)]
+        dur = rnd.uniform(4, 9)
+        r = rnd.choice([1, 1.3, 1.6, 2])
+        out += (f'<circle cx="{x:.0f}" cy="{y1}" r="{r}" fill="{col}">'
+                f'<animate attributeName="cy" values="{y1};{y0}" dur="{dur:.1f}s" begin="-{rnd.uniform(0, dur):.1f}s" repeatCount="indefinite"/>'
+                f'<animate attributeName="opacity" values="0;1;0" dur="{dur:.1f}s" begin="-{rnd.uniform(0, dur):.1f}s" repeatCount="indefinite"/>'
+                f'<animate attributeName="cx" values="{x:.0f};{x+rnd.uniform(-20, 20):.0f};{x:.0f}" dur="{dur/2:.1f}s" repeatCount="indefinite"/></circle>')
+    return out
+
+
+def arcs(cx, cy, R, seed=9):
+    """Electric arcs that crackle from the globe out to the orbit."""
+    rnd = random.Random(seed)
+    out = ""
+    T = 7
+    for i in range(5):
+        a = rnd.uniform(0, 2 * math.pi)
+        x0, y0 = cx + R * 0.9 * math.cos(a), cy + R * 0.9 * math.sin(a)
+        x1, y1 = cx + R * 1.45 * math.cos(a), cy + R * 1.1 * math.sin(a)
+        pts = [(x0, y0)]
+        for k in range(1, 6):
+            t = k / 6
+            pts.append((x0 + (x1 - x0) * t + rnd.uniform(-9, 9), y0 + (y1 - y0) * t + rnd.uniform(-9, 9)))
+        pts.append((x1, y1))
+        d = "M" + " L".join(f"{x:.1f},{y:.1f}" for x, y in pts)
+        col = [SKY, VIOLET, PINK, MINT, AMBER][i]
+        b = rnd.uniform(0, T - 0.6)
+        kt = f"0;{b/T:.3f};{(b+0.05)/T:.3f};{(b+0.12)/T:.3f};{(b+0.18)/T:.3f};{(b+0.3)/T:.3f};1"
+        out += (f'<path d="{d}" fill="none" stroke="{col}" stroke-width="1.6" stroke-linejoin="round" filter="url(#arcglow)" opacity="0">'
+                f'<animate attributeName="opacity" values="0;0;1;0.2;1;0;0" keyTimes="{kt}" dur="{T}s" repeatCount="indefinite"/></path>')
+    return out
+
+
+def static_chars(text, x0, y, size, adv, color, weight=600):
+    return "".join(f'<text x="{x0 + i*adv + adv/2:.1f}" y="{y}" text-anchor="middle" font-family="{MONO}" font-size="{size}" font-weight="{weight}" fill="{color}">{esc(ch)}</text>'
+                   for i, ch in enumerate(text) if ch != " ")
+
+
+def rgb_split(text, x0, y, size, adv, dur=5, at=0.86):
+    out = ""
+    for col, dx, dy, off in ((SKY, -4, -1, 0), (PINK, 4, 1, 0.004)):
+        t = at + off
+        out += (f'<g opacity="0" style="mix-blend-mode:screen">{static_chars(text, x0 + dx, y + dy, size, adv, col)}'
+                f'<animate attributeName="opacity" values="0;0;0.9;0;0.7;0;0" keyTimes="0;{t:.3f};{t+0.01:.3f};{t+0.025:.3f};{t+0.035:.3f};{t+0.05:.3f};1" '
+                f'calcMode="discrete" dur="{dur}s" repeatCount="indefinite"/></g>')
+    return out
+
+
 # ============================================================ BOOT sequence (top of page)
 BOOT_LINES = [("OK", MINT, "mounting /dev/curiosity"),
-              ("OK", MINT, "loading modules: python · javascript · typescript"),
-              ("OK", SKY, "calibrating opencv lenses"),
-              ("OK", VIOLET, "training neural pathways … epoch 1/∞"),
-              ("WARN", AMBER, "coffee levels low — continuing anyway"),
+              ("OK", MINT, "loading modules: typescript · python · solidity"),
+              ("OK", SKY, "compiling facetrace vision pipeline"),
+              ("OK", VIOLET, "deploying cayman-super-kings → vercel"),
+              ("WARN", AMBER, "sleep schedule not found — ignoring"),
               ("OK", MINT, "handshake with github.com/sahitya0805")]
 
 
@@ -366,7 +472,16 @@ def boot():
         col = SPECTRUM[j % len(SPECTRUM)]
         blips += (f'<circle cx="{bxp:.1f}" cy="{byp:.1f}" r="3" fill="{col}" opacity="0">'
                   f'<animate attributeName="opacity" values="0;0;1;0.15;0" keyTimes="0;{max(0,frac-0.001):.3f};{frac:.3f};{min(1,frac+0.35):.3f};1" dur="4s" repeatCount="indefinite"/></circle>')
-    return f"""{svg_open(W, H, "Boot sequence: loading curiosity, python, javascript, opencv… access granted")}
+    cpu = ""
+    for j in range(14):
+        x = 628 + j * 9
+        hs = ";".join(str(random.Random(j * 7 + k).randint(3, 18)) for k in range(8))
+        ys = ";".join(str(216 - int(v)) for v in hs.split(";"))
+        cpu += (f'<rect x="{x}" y="200" width="6" height="16" rx="1.5" fill="{spectrum(j/13)}">'
+                f'<animate attributeName="height" values="{hs}" dur="{1.2 + (j % 4)*0.15:.2f}s" repeatCount="indefinite"/>'
+                f'<animate attributeName="y" values="{ys}" dur="{1.2 + (j % 4)*0.15:.2f}s" repeatCount="indefinite"/></rect>')
+    cpu += f'<text x="{628+14*9+8}" y="214" font-family="{MONO}" font-size="9.5" letter-spacing="1.5" fill="{DARK}">CPU</text>'
+    return f"""{svg_open(W, H, "Boot sequence: mounting curiosity, compiling FaceTrace, deploying… access granted")}
 {defs_common(W, H, MINT, VIOLET)}
 <defs>
   <linearGradient id="pb" x1="0" x2="1">{stops}</linearGradient>
@@ -376,15 +491,16 @@ def boot():
   <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#fff" opacity="0.03"/></pattern>
 </defs>
 {card(W, H, beam_dur=8)}
-<g clip-path="url(#clip)"><rect width="{W}" height="{H}" fill="url(#scan)"/>{glow_blob(700, 130, 90, MINT, 0.08, -30, 10)}</g>
+<g clip-path="url(#clip)">{matrix_rain(W, H, op=0.13)}<rect width="{W}" height="{H}" fill="url(#scan)"/>{glow_blob(700, 130, 90, MINT, 0.08, -30, 10)}{glitch_bars(W, H, 6, 0.8)}</g>
 <circle cx="30" cy="26" r="5" fill="#ff5f57"/><circle cx="48" cy="26" r="5" fill="#febc2e"/><circle cx="66" cy="26" r="5" fill="#28c840"/>
 <text x="{W/2}" y="30" text-anchor="middle" font-family="{MONO}" font-size="11" fill="{DARK}">sahitya@nst — boot.sh</text>
 <line x1="0" x2="{W}" y1="46" y2="46" stroke="{HAIR}"/>
-{out}
+<g>{out}{jitter(6, 0.8)}</g>
+{cpu}
 {seg}
 <g clip-path="url(#pbc)"><rect x="{bx}" y="{by-8}" width="{bw}" height="10" fill="url(#pb)"/></g>
 <rect x="{bx}" y="{by-8}" width="{bw}" height="10" fill="none"/>
-<text x="{bx+bw+14}" y="{by+1}" font-family="{MONO}" font-size="11.5" font-weight="700" fill="{MINT}" opacity="0">ACCESS GRANTED ▸ welcome, visitor
+<text x="{bx+bw+14}" y="{by+1}" font-family="{MONO}" font-size="11.5" font-weight="700" fill="{MINT}" opacity="0">ACCESS GRANTED ▸
   <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="{gk}" dur="{T}s" repeatCount="indefinite"/>
   <animate attributeName="fill" values="{MINT};{SKY};{VIOLET};{PINK};{AMBER};{MINT}" dur="1.2s" repeatCount="indefinite"/></text>
 {rings}
@@ -417,7 +533,7 @@ def orbit_tags(cx, cy, R):
     rx, ry = R * 1.42, R * 0.36
     path = f"M{cx - rx:.1f},{cy} a{rx:.1f},{ry:.1f} 0 1,0 {2*rx:.1f},0 a{rx:.1f},{ry:.1f} 0 1,0 -{2*rx:.1f},0"
     out = f'<g transform="rotate(-14 {cx} {cy})">'
-    for i, (t, c) in enumerate([("PY", SKY), ("JS", AMBER), ("TS", VIOLET), ("CV", MINT), ("ML", PINK)]):
+    for i, (t, c) in enumerate([("PY", SKY), ("JS", AMBER), ("TS", VIOLET), ("CV", MINT), ("SOL", PINK)]):
         out += (f'<g><rect x="-15" y="-10" width="30" height="20" rx="10" fill="{CARD}" stroke="{c}" stroke-opacity="0.7"/>'
                 f'<text y="4" text-anchor="middle" font-family="{MONO}" font-size="10" font-weight="700" fill="{c}">{t}</text>'
                 f'<animateMotion dur="22s" begin="-{i*22/5:.1f}s" repeatCount="indefinite" path="{path}"/></g>')
@@ -427,7 +543,7 @@ def orbit_tags(cx, cy, R):
 # ============================================================ neural net (middle)
 def neural():
     H = 330
-    layers = [["curiosity", "coffee", "code", "late nights"], [None] * 6, [None] * 6, ["projects", "bug fixes", "new skills"]]
+    layers = [["curiosity", "code", "hackathons", "late nights"], [None] * 6, [None] * 6, ["projects", "bug fixes", "new skills"]]
     xs = [150, 330, 500, 680]
     nodes = []
     for li, layer in enumerate(layers):
@@ -468,7 +584,7 @@ def neural():
                 ns += f'<text x="{x+20}" y="{y+4:.1f}" font-family="{MONO}" font-size="12" fill="{WHITE}">{lab}</text>'
     tags = "".join(f'<text x="{x}" y="{H-20}" text-anchor="middle" font-family="{MONO}" font-size="10" letter-spacing="1.5" fill="{DARK}">{t}</text>'
                    for x, t in zip(xs, ["INPUT", "HIDDEN · 6", "HIDDEN · 6", "OUTPUT"]))
-    return f"""{svg_open(W, H, "A playful neural network: curiosity, coffee, code and late nights in; projects, bug fixes and new skills out")}
+    return f"""{svg_open(W, H, "A playful neural network: curiosity, code, hackathons and late nights in; projects, bug fixes and new skills out")}
 {defs_common(W, H, VIOLET, PINK)}
 <defs><filter id="glowN" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
 <clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath></defs>
@@ -543,7 +659,7 @@ def about():
               f'<text x="{rx+14}" y="{y+19}" font-family="{MONO}" font-size="10.5" letter-spacing="1.5" fill="{DARK}">{k}</text>'
               f'<text x="{rx+108}" y="{y+19}" font-family="{MONO}" font-size="12.5" fill="{WHITE}">{esc(v)}</text>'
               f'<line x1="{rx}" x2="{W-36}" y1="{y+32}" y2="{y+32}" stroke="{HAIR}"/></g>')
-    return f"""{svg_open(W, H, "About: first-year at Newton School of Technology, Bengaluru; machine learning, computer vision, open source.")}
+    return f"""{svg_open(W, H, "About: first-year at Newton School of Technology, Bengaluru; web, computer vision and web3.")}
 {defs_common(W, H, MINT, SKY)}
 <defs><clipPath id="clip"><rect width="{W}" height="{H}" rx="16"/></clipPath></defs>
 {card(W, H, beam_dur=10)}
@@ -665,7 +781,7 @@ TOPIC_NAMES = {"fastapi": "FastAPI", "web3": "Web3", "solidity": "Solidity", "fa
                "pandas": "Pandas", "tensorflow": "TensorFlow", "pytorch": "PyTorch", "scikit-learn": "scikit-learn",
                "hacktoberfest": "Hacktoberfest", "github-actions": "GitHub Actions", "docker": "Docker",
                "api": "APIs", "rest-api": "REST APIs", "firebase": "Firebase", "vite": "Vite", "ai": "AI", "llm": "LLMs"}
-SKIP_TOPICS = {"smart-india-hackathon", "sih2026", "hacktoberfest", "mlh", "static-site", "website", "cricket", "report", "documentation", "event-planning", "social-impact", "hackathon"}
+SKIP_TOPICS = {"opencv", "machine-learning", "deep-learning", "ml", "open-source", "opensource", "smart-india-hackathon", "sih2026", "hacktoberfest", "mlh", "static-site", "website", "cricket", "report", "documentation", "event-planning", "social-impact", "hackathon"}
 SKIP_LANGS = {"Rich Text Format", "Procfile", "Batchfile", "Makefile", "Dockerfile", "Shell", "PowerShell"}
 
 
@@ -912,7 +1028,7 @@ def stats_card(s):
              ("CURRENT STREAK", f"{cur}", "days", MINT),
              ("LONGEST STREAK", f"{longest}", "days", AMBER),
              ("COMMITS", f"{s['commits']:,}", "all time", VIOLET),
-             ("PULL REQUESTS", f"{s['prs']:,}", "opened", PINK),
+             ("PULL REQUESTS", f"{s['prs']:,}", "raised", PINK),
              ("REPOSITORIES", f"{s['repos']:,}", f"{s['stars']} ★ earned", CORAL)]
     colw = (W - 72) / 6
     nums = ""

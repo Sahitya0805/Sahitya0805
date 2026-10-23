@@ -6,13 +6,13 @@
 
 <div align="center">
 
-<img src="assets/boot.svg" width="100%" alt="Boot sequence: loading curiosity, python, javascript, opencv… access granted" />
-<img src="assets/hero.svg" width="100%" alt="Sahitya Singh — tech explorer & open-source contributor, Newton School of Technology, Bengaluru" />
+<img src="assets/boot.svg" width="100%" alt="Boot sequence: mounting curiosity, compiling FaceTrace, deploying… access granted" />
+<img src="assets/hero.svg" width="100%" alt="Sahitya Singh — tech explorer & builder, Newton School of Technology, Bengaluru" />
 
 <br/><br/>
 
 <img src="assets/label_about.svg" width="100%" alt="01 About" />
-<img src="assets/about.svg" width="100%" alt="First-year at Newton School of Technology, Bengaluru. Machine learning, computer vision with OpenCV, open source." />
+<img src="assets/about.svg" width="100%" alt="First-year at Newton School of Technology, Bengaluru. Web, computer vision and web3." />
 
 <br/><br/>
 
@@ -39,7 +39,7 @@
 <br/><br/>
 
 <img src="assets/label_brain.svg" width="100%" alt="05 Brain" />
-<img src="assets/neural.svg" width="100%" alt="Neural network: curiosity, coffee, code and late nights in; projects, bug fixes and new skills out" />
+<img src="assets/neural.svg" width="100%" alt="Neural network: curiosity, code, hackathons and late nights in; projects, bug fixes and new skills out" />
 
 <img src="assets/helix.svg" width="100%" alt="" />
 

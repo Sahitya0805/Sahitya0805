@@ -11,5 +11,5 @@
   "Hacktoberfest": {"description": "Hacktoberfest 2026 hackathon plan by DevForge at Newton School of Technology — 13.5-hour overnight run-of-show, budget and logistics.",
                     "topics": ["hacktoberfest", "hackathon", "event-planning", "mlh"]},
   "HHG-3": {"description": "FaceTrace — detects a face, finds where it appears online via reverse-image search, and records a tamper-evident fingerprint on an EVM blockchain.",
-            "topics": ["python", "fastapi", "opencv", "face-recognition", "computer-vision", "blockchain", "web3", "solidity", "react"]}
+            "topics": ["python", "fastapi", "face-recognition", "computer-vision", "blockchain", "web3", "solidity", "react"]}
 }
