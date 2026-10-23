@@ -30,8 +30,8 @@ W = 830
 SANS = "Inter,'Segoe UI',-apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif"
 MONO = "'JetBrains Mono','SF Mono',SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 
-BG = "#0a0a0a"
-CARD = "#0c0c0c"
+BG = "#000000"
+CARD = "#000000"
 HAIR = "#1f1f1f"
 HAIR2 = "#2a2a2a"
 WHITE = "#ededed"
@@ -282,9 +282,6 @@ def hero():
 {card(W, H, beam_dur=11)}
 <g clip-path="url(#clip)">
   <rect width="{W}" height="{H}" fill="url(#grid)" mask="url(#gridmask)"/>
-  {glow_blob(140, 110, 120, VIOLET, 0.16, 80, 18)}
-  {glow_blob(330, 260, 110, MINT, 0.10, -70, 15)}
-  {glow_blob(700, 90, 110, CORAL, 0.08, -50, 20)}
   {globe(640, 178, 118)}
   {orbit_tags(640, 178, 118)}
   {arcs(640, 178, 118)}
