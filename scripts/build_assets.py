@@ -59,14 +59,14 @@ ABOUT_PARA = ["Hi, I'm Sahitya Singh!",
               "Debugging in Style."]
 ABOUT_ROWS = [("NAME", "Sahitya Singh", CORAL), ("ROLE", "Tech Explorer", MINT),
               ("STUDYING", "1st Year · NST Bengaluru", SKY), ("LANGUAGES", "JavaScript · Python · Java", AMBER),
-              ("FRONTEND", "HTML5 · CSS3", VIOLET), ("TOOLS", "Git", PINK)]
+              ("FRONTEND", "HTML5 · CSS3 · React", VIOLET), ("TOOLS", "Git", PINK)]
 
 
 
 FORTUNES = [("Why do programmers prefer dark mode?", "because light attracts bugs!", MINT)]
 
 STACK_1 = [("JavaScript", "#f1e05a"), ("Python", "#3572A5"), ("Java", "#b07219")]
-STACK_2 = [("HTML5", "#e34c26"), ("CSS3", "#663399"), ("Git", "#f05032")]
+STACK_2 = [("HTML5", "#e34c26"), ("CSS3", "#663399"), ("React", "#61DAFB"), ("Git", "#f05032")]
 
 
 # =================================================================== helpers
@@ -417,7 +417,7 @@ BOOT_LINES = [("OK", MINT, "user: sahitya singh"),
               ("OK", SKY, "role: tech explorer"),
               ("OK", VIOLET, "status: 1st year student @ NST Bengaluru"),
               ("OK", AMBER, "languages: javascript · python · java"),
-              ("OK", PINK, "frontend: html5 · css3 · tools: git"),
+              ("OK", PINK, "frontend: html5 · css3 · react · tools: git"),
               ("OK", CORAL, "dreaming in algorithms, debugging in style")]
 
 
@@ -518,10 +518,10 @@ def orbit_tags(cx, cy, R):
     rx, ry = R * 1.42, R * 0.36
     path = f"M{cx - rx:.1f},{cy} a{rx:.1f},{ry:.1f} 0 1,0 {2*rx:.1f},0 a{rx:.1f},{ry:.1f} 0 1,0 -{2*rx:.1f},0"
     out = f'<g transform="rotate(-14 {cx} {cy})">'
-    for i, (t, c) in enumerate([("JS", AMBER), ("PY", SKY), ("JAVA", CORAL), ("HTML", PINK), ("CSS", VIOLET), ("GIT", MINT)]):
+    for i, (t, c) in enumerate([("JS", AMBER), ("PY", SKY), ("JAVA", CORAL), ("HTML", PINK), ("CSS", VIOLET), ("REACT", SKY), ("GIT", MINT)]):
         out += (f'<g><rect x="{-(len(t)*3.3+9):.1f}" y="-10" width="{len(t)*6.6+18:.1f}" height="20" rx="10" fill="{CARD}" stroke="{c}" stroke-opacity="0.7"/>'
                 f'<text y="4" text-anchor="middle" font-family="{MONO}" font-size="10" font-weight="700" fill="{c}">{t}</text>'
-                f'<animateMotion dur="22s" begin="-{i*22/6:.1f}s" repeatCount="indefinite" path="{path}"/></g>')
+                f'<animateMotion dur="22s" begin="-{i*22/7:.1f}s" repeatCount="indefinite" path="{path}"/></g>')
     return out + "</g>"
 
 

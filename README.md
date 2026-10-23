@@ -17,7 +17,7 @@
 <br/><br/>
 
 <img src="assets/label_stack.svg" width="100%" alt="02 Tech Arsenal" />
-<img src="assets/stack.svg" width="100%" alt="JavaScript, Python, Java, HTML5, CSS3, Git" />
+<img src="assets/stack.svg" width="100%" alt="JavaScript, Python, Java, HTML5, CSS3, React, Git" />
 
 <br/><br/>
 
